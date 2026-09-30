@@ -1,6 +1,18 @@
 :root {
-  --f-d: 'Plus Jakarta Sans', sans-serif;
-  --f-b: 'DM Sans', sans-serif;
+  /* Famílias: display (H1, H2, números, numeração, citações) · interface (navbar,
+     rótulos, botões, H3) · corpo. Aquawax Pro substituirá a de interface quando licenciada. */
+  --f-display: 'Playfair Display', Georgia, serif;
+  --f-ui:      'Plus Jakarta Sans', sans-serif;
+  --f-body:    'DM Sans', sans-serif;
+  /* aliases antigos, ainda usados em pages.css */
+  --f-d: var(--f-ui);
+  --f-b: var(--f-body);
+
+  /* Raio único para cards, botões, chips e iframes */
+  --radius: 4px;
+
+  /* Movimento (ver CLAUDE.md) */
+  --ease-entrada: cubic-bezier(.2, .8, .2, 1);
 
   /* Paleta base */
   --branco:       #ffffff;
@@ -8,7 +20,7 @@
   --areia-borda:  #e2dbd0;
   --carvao:       #1e1a14;
   --cinza:        #5c5650;
-  --cinza-claro:  #9a9490;
+  --cinza-claro:  #9a9490;   /* só para elementos que não são texto */
 
   /* Ocre/terra — da linha do tempo e mapa */
   --ocre:         #b86e1f;
@@ -17,6 +29,21 @@
   --ocre-bg:      #fff8ef;
   --terracota:    #a63318;
   --ocre-escuro:  #8a4e10;
+
+  /* Cores do logo SoU_Ciência */
+  --sou-verde:    #00a086;
+  --sou-magenta:  #c4245a;
+  --sou-azul:     #1e7ec8;
+  --sou-laranja:  #e85d1a;
+
+  /* Tons para TEXTO: as cores acima escurecidas até contraste ≥ 4,5:1
+     sobre branco e sobre areia (medido em 01/10/2026). O magenta já passa. */
+  --texto-verde:       #007965;  /* 5,35 branco · 4,71 areia */
+  --texto-azul:        #1a70b1;  /* 5,25 · 4,62 */
+  --texto-laranja:     #b74914;  /* 5,28 · 4,65 */
+  --texto-ocre:        #9c5d1a;  /* 5,26 · 4,63 */
+  --texto-magenta:     #c4245a;  /* 5,60 · 4,93 */
+  --texto-cinza-claro: #6e6a67;  /* 5,36 · 4,71 */
 
   /* Ciclos — copiados de ALL_DATA.cycles da linha do tempo publicada
      (https://meyrele.github.io/linha-do-tempo-linha-7/) */
@@ -32,12 +59,6 @@
   --mapa-estadual:  #1F73B8;
   --mapa-municipal: #B8860B;
   --mapa-privada:   #1A1A1A;
-
-  /* Cores do logo SoU_Ciência */
-  --sou-verde:    #00a086;
-  --sou-magenta:  #c4245a;
-  --sou-azul:     #1e7ec8;
-  --sou-laranja:  #e85d1a;
 
   --sombra-s:  rgba(30,26,20,.06);
   --sombra-m:  rgba(30,26,20,.1);

@@ -11,14 +11,6 @@
   border-bottom: 1px solid var(--areia-borda);
 }
 
-.page-colorbar {
-  position: absolute;
-  top: var(--nav-h); left: 0; right: 0;
-  height: 3px;
-  display: flex;
-}
-
-.page-colorbar span { flex: 1; }
 
 .page-hero-inner { max-width: 800px; }
 
@@ -48,11 +40,11 @@
 }
 
 .page-title {
-  font-family: var(--f-d);
-  font-size: var(--fs-h1);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -.025em;
+  font-family: var(--f-display);
+  font-size: clamp(38px, 4.2vw, 60px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.01em;
   color: var(--carvao);
   margin-bottom: 20px;
 }
@@ -107,8 +99,8 @@
 .prose ul, .prose ol { margin: 16px 0 16px 22px; }
 .prose li + li { margin-top: 6px; }
 .prose strong { font-weight: 600; color: var(--carvao); }
-.prose a { color: var(--sou-azul); text-underline-offset: 3px; }
-.prose a:hover { color: var(--ocre); }
+.prose a { color: var(--texto-azul); text-underline-offset: 3px; }
+.prose a:hover { color: var(--texto-ocre); }
 .prose a.btn-primary { color: var(--branco); }
 
 /* bloco de destaque: nota, observação */
@@ -116,7 +108,7 @@
   background: var(--branco);
   border: 1px solid var(--areia-borda);
   border-left: 4px solid var(--ocre);
-  border-radius: var(--radius-s);
+  border-radius: var(--radius);
   padding: 20px 24px;
   margin-top: 28px;
 }
@@ -176,7 +168,7 @@
   margin: 0 !important;
   background: var(--branco);
   border: 1px solid var(--areia-borda);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 14px 18px;
   line-height: 1.5;
 }
@@ -213,7 +205,7 @@
   align-items: center;
   background: var(--branco);
   border: 1px solid var(--areia-borda);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 16px 20px;
 }
 
@@ -223,7 +215,7 @@
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--cinza-claro);
+  color: var(--texto-cinza-claro);
 }
 
 .lesson-title {
@@ -266,9 +258,9 @@
 }
 
 .lesson--cancelada { background: transparent; border-style: dashed; }
-.lesson--cancelada .lesson-title { color: var(--cinza-claro); font-weight: 600; }
+.lesson--cancelada .lesson-title { color: var(--texto-cinza-claro); font-weight: 600; }
 
-.lesson--destaque { border: 1.5px solid var(--sou-verde); box-shadow: 0 8px 28px var(--sombra-s); }
+.lesson--destaque { border: 1.5px solid var(--sou-verde);  }
 
 .lesson-badge {
   display: inline-block;
@@ -278,9 +270,9 @@
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: #007a65;
+  color: #006a58;
   background: #d6f2ec;
-  border-radius: 20px;
+  border-radius: var(--radius);
   padding: 4px 10px;
 }
 
