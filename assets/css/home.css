@@ -1,8 +1,8 @@
 /* ══════════════════════════════════════════════════════════════════
    HOME — só o que é específico de index.html.
    Reset, navbar, rodapé, botões, rótulos, .rule e .rows estão em base.css.
-   Linguagem: tipografia, fios, numeração e as manchas de aquarela da
-   linha do tempo. Sem cards, sem sombras, sem gradientes decorativos.
+   Linguagem: tipografia, fios, numeração e a aquarela da equipe ao fundo
+   do hero. Sem cards, sem sombras, sem gradientes decorativos.
 ══════════════════════════════════════════════════════════════════ */
 
 .section {
@@ -34,37 +34,33 @@
 /* ══════════════════════════════════════
    HERO
 ══════════════════════════════════════ */
-/* O topo do hero é uma faixa reservada às manchas; o conteúdo assenta na base. */
+/* Conteúdo centralizado na altura visível (abaixo da navbar fixa). */
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  margin-top: var(--nav-h);
+  min-height: calc(100vh - var(--nav-h));
   display: flex;
-  align-items: flex-end;
-  padding: calc(var(--nav-h) + 320px) var(--pad-x) 120px;
+  align-items: center;
+  padding: 72px var(--pad-x);
   background: var(--branco);
 }
 
-.hero-manchas {
+/* Aquarela da equipe: fundo ancorado no alto à direita, saindo pelas duas bordas.
+   As bordas esquerda e inferior esmaecem no próprio .webp (canal alfa).
+   A folga de 24px (top/right negativos) cobre a deriva sem revelar o limite da imagem. */
+.hero-aquarela {
   position: absolute;
-  inset: 0;
   z-index: 0;
   pointer-events: none;
-}
-
-.mancha {
-  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 62%;
   height: auto;
   max-width: none;
-  opacity: .45;
+  opacity: .55;
+  transform-origin: 100% 0;
 }
-
-/* ocre (ciclo 1): no alto, ao centro */
-.mancha-1 { width: 400px; top: calc(var(--nav-h) - 24px); left: 42%; opacity: .5; }
-/* vermelha (ciclo 2): sai pela direita, sobre a ocre */
-.mancha-2 { width: 640px; top: calc(var(--nav-h) + 96px); right: -170px; opacity: .42; }
-/* verde (ciclo 3): sai pela base, sob os indicadores */
-.mancha-3 { width: 820px; bottom: -130px; left: 2%; opacity: .5; }
 
 .hero-content {
   position: relative;
@@ -73,7 +69,7 @@
   display: grid;
   grid-template-columns: 1.15fr .85fr;
   gap: 80px;
-  align-items: end;
+  align-items: center;
 }
 
 .hero-super {
@@ -444,26 +440,14 @@
 
 .js [data-reveal].in [data-item] { opacity: 1; transform: none; }
 
-/* D5 — manchas: deriva lenta (até 12 px e 2°), cada uma num ritmo */
-@keyframes deriva-1 {
+/* D5 — aquarela: deriva lenta (até 10 px e 1°), ciclo de 24 s (12 s em cada sentido) */
+@keyframes deriva {
   0%   { transform: translate(0, 0) rotate(0deg); }
-  50%  { transform: translate(10px, -8px) rotate(1.5deg); }
-  100% { transform: translate(-6px, 6px) rotate(-1deg); }
-}
-@keyframes deriva-2 {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  50%  { transform: translate(-12px, 6px) rotate(-2deg); }
-  100% { transform: translate(8px, -4px) rotate(1deg); }
-}
-@keyframes deriva-3 {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  50%  { transform: translate(8px, 10px) rotate(1deg); }
-  100% { transform: translate(-10px, -2px) rotate(-1.5deg); }
+  50%  { transform: translate(-10px, 6px) rotate(-1deg); }
+  100% { transform: translate(-4px, 10px) rotate(.5deg); }
 }
 
-.mancha-1 { animation: deriva-1 22s ease-in-out infinite alternate; }
-.mancha-2 { animation: deriva-2 26s ease-in-out infinite alternate; }
-.mancha-3 { animation: deriva-3 18s ease-in-out infinite alternate; }
+.hero-aquarela { animation: deriva 12s ease-in-out infinite alternate; }
 
 @media (prefers-reduced-motion: reduce) {
   .js .hero .seq,
@@ -471,7 +455,7 @@
   .js .hero-start .row,
   .js .hero-start .rows > li::before,
   .js .hero-start .rows > li:last-child::after,
-  .mancha { animation: none; }
+  .hero-aquarela { animation: none; }
 
   .js [data-reveal] .rule,
   .js [data-reveal] .rows > li::before,
@@ -486,11 +470,8 @@
    RESPONSIVO
 ══════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero { min-height: 0; padding-top: calc(var(--nav-h) + 260px); }
   .hero-content { grid-template-columns: 1fr; gap: 64px; }
-  .mancha-1 { width: 320px; left: 34%; top: calc(var(--nav-h) - 20px); }
-  .mancha-2 { width: 560px; right: -200px; top: calc(var(--nav-h) + 40px); }
-  .mancha-3 { width: 720px; left: -60px; }
+  .hero-aquarela { width: 75%; }
 
   .sec-head { gap: 40px; }
   .about-section { gap: 56px; }
@@ -499,10 +480,14 @@
 @media (max-width: 720px) {
   .section { padding: 72px var(--pad-x); }
 
-  /* só uma mancha, no canto superior direito */
-  .hero { padding: calc(var(--nav-h) + 170px) var(--pad-x) 72px; }
-  .mancha-2, .mancha-3 { display: none; }
-  .mancha-1 { width: 240px; top: calc(var(--nav-h) - 36px); left: auto; right: -56px; }
+  /* aquarela em faixa no topo, largura total; o conteúdo vem abaixo, sem sobreposição */
+  .hero { min-height: 0; align-items: flex-start; padding: 272px var(--pad-x) 64px; }
+  .hero-aquarela {
+    top: -12px; right: -12px;
+    width: calc(100% + 24px);
+    height: 252px;       /* 240px visíveis + folga da deriva */
+    object-fit: cover;
+  }
 
   .hero-stats { gap: 28px; }
   .hero-stat-num { font-size: 34px; }
