@@ -20,3 +20,7 @@ assets/img/linha-do-tempo-aprovada.jpg
 
 # Capturas de tela da verificação local (Playwright)
 verificacao/
+
+# Skills de terceiros (emilkowalski/skill), instaladas localmente com "npx skills add".
+# O skills-lock.json é versionado; para reinstalar: npx skills experimental_install
+.claude/skills/
