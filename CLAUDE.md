@@ -24,7 +24,7 @@ Publicado em: https://meyrele.github.io/painel-linha-7/
 - **Os números da home — 134 iniciativas — são fixos no HTML**; atualizar junto com o mapa (hero e título da seção Mapa em `index.html`).
 - **A home copia as cores dos sites publicados do mapa e da linha do tempo, nunca o contrário.** As cores dos ciclos vêm de `ALL_DATA.cycles` da linha do tempo; as dos tipos de instituição, da legenda do mapa. Ficam em `tokens.css` (`--ciclo-*`, `--mapa-*`).
 - **Licença exibida: CC BY 4.0, a confirmar com a equipe.**
-- A imagem original `linha-do-tempo-aprovada.jpg` (~11 MB) fica só local (`.gitignore`); o site usa a versão `.webp`. Ela também é a fonte das manchas de aquarela. **Cuidado ao mesclar em `main` branches antigas**: o merge que tirou o .jpg do git apagou a cópia local; se sumir, restaurar com `git show a6deb38:assets/img/linha-do-tempo-aprovada.jpg > assets/img/linha-do-tempo-aprovada.jpg`.
+- A imagem original `linha-do-tempo-aprovada.jpg` (~11 MB) fica só local (`.gitignore`); o site usa a versão `.webp`. **Cuidado ao mesclar em `main` branches antigas**: o merge que tirou o .jpg do git apagou a cópia local; se sumir, restaurar com `git show a6deb38:assets/img/linha-do-tempo-aprovada.jpg > assets/img/linha-do-tempo-aprovada.jpg`.
 
 ## Estrutura
 
@@ -33,7 +33,7 @@ index.html          home do painel
 pages/              estudos-tematicos, glossario, biblioteca, agenda-de-futuros, equipe, metodologia
 assets/css/         tokens.css (variáveis :root) + base.css (compartilhado) + home.css + pages.css
 assets/js/          main.js (compartilhado: menu mobile, fios e entradas, contadores, pôster da prévia da linha do tempo)
-assets/img/         logos SoU_Ciência (normal e claro), favicons, imagem da linha do tempo (.webp) e manchas de aquarela (mancha-1..3.webp)
+assets/img/         logos SoU_Ciência (normal e claro), favicons, imagem da linha do tempo (.webp) e aquarela do hero (aquarela-hero.webp)
 content/            documento-guia (.docx original + .md convertido + media/), SÓ LOCAL
 ```
 
@@ -62,21 +62,21 @@ Cores dos ciclos históricos:
 
 ## Linguagem visual
 
-Editorial, não de template: tipografia, fios horizontais, numeração e as manchas de aquarela da linha do tempo.
+Editorial, não de template: tipografia, fios horizontais, numeração e a aquarela ao fundo do hero.
 
 - **Tipografia:** Playfair Display 400 (e itálico) para display — H1, H2, números grandes, numeração 01/02/03 e citações. Plus Jakarta Sans para navbar, rótulos, botões e H3. DM Sans para o corpo. Tokens: `--f-display`, `--f-ui`, `--f-body`.
 - **Fios e numeração em vez de cards:** listas usam `.rows` (linhas separadas por `.rule`, grade rótulo 120px · título · texto · ação 120px). Nada de cards com borda colorida no topo, ícones em quadrados pastel, badges com bolinha ou sombras.
 - **Raio único de 4px** (`--radius`) para botões, iframes e o que tiver canto. Botões não são pílulas.
 - **Rótulos de seção:** só texto em caixa-alta (Plus Jakarta 11px, `.14em`), na cor da seção.
 - **Cor em texto:** usar os tons `--texto-*` de `tokens.css` (contraste ≥ 4,5:1 sobre branco e areia). As cores puras do SoU ficam para elementos que não são texto. O magenta passa nos dois fundos e é usado direto.
-- **Manchas de aquarela** (`assets/img/mancha-1..3.webp`, ciclos 1, 2 e 3 do pôster) são elemento de identidade: fundo do hero, opacidade 0,35–0,5, nunca sobre texto. Recortadas do .jpg original; o pigmento foi aprofundado para que, a ~0,45 de opacidade, tenham o tom do pôster.
+- **Aquarela do hero** (`assets/img/aquarela-hero.webp`) é elemento de identidade: imagem fornecida pela equipe, **não** recortes do pôster da linha do tempo. O original (`watercolor-abstract-rainbow-blend-of-colors-on-pap-2026-09-25-08-18-26-utc.jpg`, na raiz) fica fora do git. Tratamento: Adobe RGB convertido para sRGB, 1800px, WebP 80, bordas esquerda e inferior esmaecidas no canal alfa (a imagem cobre o papel inteiro, então não há fundo branco a remover); cores não alteradas. No hero: fundo ancorado no alto à direita, 62% da largura (75% em 1024px; faixa de 240px no topo em 720px), opacidade 0,55. Qualquer mudança de posição ou opacidade exige medir de novo o contraste do texto sobre ela (≥ 4,5:1).
 
 ### Movimento
 
 - Durações: 200–400 ms para interação, até 700 ms para entrada.
 - Easing: `cubic-bezier(.2,.8,.2,1)` (`--ease-entrada`) para entradas; `ease-out` para hovers.
 - Animar só `transform` e `opacity` (os fios animam `transform: scaleX`).
-- Sem parallax e sem elementos flutuando; o único loop é a deriva lenta das manchas.
+- Sem parallax e sem elementos flutuando; o único loop é a deriva lenta da aquarela do hero (até 10px e 1°, ciclo de 24 s).
 - Hover com movimento só em `@media (hover: hover) and (pointer: fine)`.
 - Tudo desligado com `prefers-reduced-motion: reduce`.
 - Ferramenta: a skill **emilkowalski/skill** (`animate` para construir, `review-animations` para revisar, `find-animation-opportunities` para procurar). Fica instalada em `.claude/skills/` (fora do git); o `skills-lock.json` é versionado; para reinstalar: `npx skills experimental_install`.
