@@ -20,15 +20,20 @@ Publicado em: https://meyrele.github.io/painel-linha-7/
 - **Deploy = branch `main`, pasta raiz**, via GitHub Pages. O que está na `main` está no ar.
 - **Caminhos sempre relativos** (`assets/...`, `pages/...`), nunca começando com `/`: o site vive no subdiretório `/painel-linha-7/` do domínio, e um caminho absoluto quebra no ar.
 - **Fonte Aquawax Pro não pode ser versionada** (licença pendente). Nenhum `.woff`, `.woff2`, `.otf` ou `.ttf` entra no repo (já bloqueado no `.gitignore`). Até a licença sair, usar Plus Jakarta Sans (títulos) e DM Sans (texto) via Google Fonts.
+- **`assets/css/base.css` é compartilhado por todas as páginas** (home e `pages/`): reset, tokens de tipografia, navbar e menu mobile, botões, cabeçalhos de seção, etiqueta "Em construção", rodapé e `.reveal`. Estilos só da home vão em `home.css`; só das páginas internas, em `pages.css`. Navbar e rodapé são repetidos em cada HTML: ao mudar um, mudar em todos.
+- **Os números da home — 134 iniciativas — são fixos no HTML**; atualizar junto com o mapa (hero e título da seção Mapa em `index.html`).
+- **A home copia as cores dos sites publicados do mapa e da linha do tempo, nunca o contrário.** As cores dos ciclos vêm de `ALL_DATA.cycles` da linha do tempo; as dos tipos de instituição, da legenda do mapa. Ficam em `tokens.css` (`--ciclo-*`, `--mapa-*`).
+- **Licença exibida: CC BY 4.0, a confirmar com a equipe.**
+- A imagem original `linha-do-tempo-aprovada.jpg` (~11 MB) fica só local (`.gitignore`); o site usa a versão `.webp`.
 
 ## Estrutura
 
 ```
 index.html          home do painel
-pages/              páginas internas (Estudos Temáticos, Glossário, Panorama, Metodologia…)
-assets/css/         tokens.css (variáveis :root) + home.css (estilos da home)
-assets/js/          main.js (zoom da linha do tempo, animações de entrada)
-assets/img/         logo SoU_Ciência e imagem da linha do tempo aprovada
+pages/              estudos-tematicos, glossario, biblioteca, agenda-de-futuros, equipe, metodologia
+assets/css/         tokens.css (variáveis :root) + base.css (compartilhado) + home.css + pages.css
+assets/js/          main.js (compartilhado: menu mobile, animações, pôster da prévia da linha do tempo)
+assets/img/         logos SoU_Ciência (normal e claro), favicons e imagem da linha do tempo (.webp)
 content/            documento-guia (.docx original + .md convertido + media/), SÓ LOCAL
 ```
 
