@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Universidades em rede pela Economia Solidária: mapa, memória e movimento</title>
+<meta name="description" content="Painel da Linha 7 do SoU_Ciência (Unifesp): iniciativas universitárias em parceria com movimentos sociais por uma economia solidária feminista ecológica — mapa, linha do tempo e estudos temáticos.">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 
 <!--
@@ -14,347 +19,330 @@
 -->
 
 <link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
 
 <!-- ══ NAVBAR ══════════════════════════════════════════════════════════ -->
-<nav>
+<nav class="site-nav" aria-label="Principal">
   <div class="nav-left">
-    <img src="assets/img/souciencia-logo.svg"
-         alt="SoU_Ciência — Centro de Estudos Sociedade, Universidade e Ciência">
-    <div class="nav-sep"></div>
-    <span class="nav-project">
-      <strong>Universidades e movimentos sociais</strong> por uma Economia Solidária Feminista Ecológica
-    </span>
+    <a class="nav-logo" href="index.html">
+      <img src="assets/img/souciencia-logo.svg" alt="SoU_Ciência — página inicial do painel" width="171" height="40">
+    </a>
+    <div class="nav-sep" aria-hidden="true"></div>
+    <span class="nav-project">Painel da Linha 7</span>
   </div>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span></button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#mapa">Mapa</a></li>
-    <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
+    <li><a href="#linha-do-tempo">Linha do tempo</a></li>
+    <li><a href="#estudos">Estudos temáticos</a></li>
+    <li><a href="pages/glossario.html">Glossário</a></li>
+    <li><a href="pages/biblioteca.html">Biblioteca</a></li>
     <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#explorar">Explorar</a></li>
-    <li><a href="#contato" class="nav-cta">Contato</a></li>
   </ul>
 </nav>
+
+<main>
 
 <!-- ══ HERO ════════════════════════════════════════════════════════════ -->
 <section class="hero">
 
   <!-- faixa de cor do logo SoU -->
-  <div class="hero-colorbar">
+  <div class="hero-colorbar" aria-hidden="true">
     <span style="background:var(--sou-verde);"></span>
     <span style="background:var(--sou-magenta);"></span>
     <span style="background:var(--sou-azul);"></span>
     <span style="background:var(--sou-laranja);"></span>
   </div>
 
-  <!-- Grade: esquerda texto · direita painel contextual -->
   <div class="hero-content">
 
     <!-- Coluna esquerda -->
     <div class="hero-content-left">
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
-        <span>Painel interativo · Lançamento 2026</span>
+        <span>Painel interativo · Lançamento em etapas · 2026</span>
       </div>
 
-      <p class="hero-super">Universidades e Movimentos Sociais</p>
+      <p class="hero-super">Universidades em rede pela Economia Solidária</p>
 
-      <h1 class="hero-title">
-        Por uma <span class="em-solidaria">Economia Solidária</span>
-        <span class="em-feminista">Feminista</span>
-        <span class="em-ecologica">Ecológica</span>
-      </h1>
+      <h1 class="hero-title">Mapa, memória e movimento</h1>
 
       <p class="hero-desc">
-        Um levantamento espaço-temporal das iniciativas universitárias em parceria com movimentos sociais no Brasil, da redemocratização aos dias atuais.
+        Iniciativas universitárias em parceria com movimentos sociais por uma economia solidária feminista ecológica — da redemocratização à construção de agendas de futuros.
       </p>
 
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-num">130+</div>
+          <div class="hero-stat-num">134</div>
           <div class="hero-stat-label">Iniciativas<br>mapeadas</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">5</div>
-          <div class="hero-stat-label">Ciclos<br>históricos</div>
+          <div class="hero-stat-num">30+</div>
+          <div class="hero-stat-label">Anos de<br>história</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">32+</div>
-          <div class="hero-stat-label">Anos de<br>trajetória</div>
+          <div class="hero-stat-num">3</div>
+          <div class="hero-stat-label">Estudos<br>temáticos</div>
         </div>
       </div>
     </div>
 
-    <!-- Coluna direita: quote + ciclos -->
-    <div class="hero-content-right">
-
-      <div class="hero-quote-card">
-        <p>"Há décadas, iniciativas nas universidades constroem, junto a movimentos sociais, caminhos para outra economia — solidária, feminista e ecológica."</p>
-        <cite>Inspirado no conceito de Universidade Necessária · Darcy Ribeiro</cite>
-      </div>
-
-      <div class="hero-cycles-card">
-        <div class="hero-cycles-label">Cinco ciclos históricos</div>
-        <div class="mini-cycle">
-          <div class="mini-dot" style="background:#c17f3b;"></div>
-          <div class="mini-cycle-info">
-            <div class="mini-cycle-name">Emergência nas Universidades</div>
-            <div class="mini-cycle-period">1993–2002</div>
-          </div>
-          <div class="mini-track"><div class="mini-fill" style="width:60%;background:#c17f3b;"></div></div>
-        </div>
-        <div class="mini-cycle">
-          <div class="mini-dot" style="background:#b85c3a;"></div>
-          <div class="mini-cycle-info">
-            <div class="mini-cycle-name">Institucionalização das Políticas Públicas</div>
-            <div class="mini-cycle-period">2003–2010</div>
-          </div>
-          <div class="mini-track"><div class="mini-fill" style="width:85%;background:#b85c3a;"></div></div>
-        </div>
-        <div class="mini-cycle">
-          <div class="mini-dot" style="background:#7CA9A0;"></div>
-          <div class="mini-cycle-info">
-            <div class="mini-cycle-name">Transversalidade e Redes</div>
-            <div class="mini-cycle-period">2011–2015</div>
-          </div>
-          <div class="mini-track"><div class="mini-fill" style="width:68%;background:#7CA9A0;"></div></div>
-        </div>
-        <div class="mini-cycle">
-          <div class="mini-dot" style="background:#7E4E34;"></div>
-          <div class="mini-cycle-info">
-            <div class="mini-cycle-name">Desmonte das Políticas Públicas</div>
-            <div class="mini-cycle-period">2016–2022</div>
-          </div>
-          <div class="mini-track"><div class="mini-fill" style="width:50%;background:#7E4E34;"></div></div>
-        </div>
-        <div class="mini-cycle">
-          <div class="mini-dot" style="background:#A7B74C;"></div>
-          <div class="mini-cycle-info">
-            <div class="mini-cycle-name">Reconstrução e Reinvenção</div>
-            <div class="mini-cycle-period">2023–2025</div>
-          </div>
-          <div class="mini-track"><div class="mini-fill" style="width:35%;background:#A7B74C;"></div></div>
-        </div>
-      </div>
-
-    </div>
+    <!-- Coluna direita: por onde começar -->
+    <nav class="start-card" aria-labelledby="start-label">
+      <div class="start-label" id="start-label">Por onde começar</div>
+      <ul class="start-paths">
+        <li>
+          <a class="start-path acc-ocre" href="#mapa">
+            <span class="start-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2C7.69 2 5 4.69 5 8c0 4.75 6 12 6 12s6-7.25 6-12c0-3.31-2.69-6-6-6z"/><circle cx="11" cy="8" r="2.5"/></svg></span>
+            <span>
+              <span class="start-title">Encontrar iniciativas</span>
+              <span class="start-text">Localize incubadoras, núcleos e coletivos por região, rede ou tema de atuação.</span>
+            </span>
+            <span class="start-arr"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="start-path acc-verde" href="#linha-do-tempo">
+            <span class="start-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M2 11h18"/><circle cx="5.5" cy="11" r="2"/><circle cx="11" cy="11" r="2"/><circle cx="16.5" cy="11" r="2"/><path d="M5.5 9V5M11 13v4M16.5 9V5"/></svg></span>
+            <span>
+              <span class="start-title">Entender a história</span>
+              <span class="start-text">Percorra cinco ciclos, da redemocratização à reconstrução, com eventos e fontes.</span>
+            </span>
+            <span class="start-arr"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="start-path acc-magenta" href="#estudos">
+            <span class="start-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2L2 7l9 4.5 9-4.5-9-5zM2 15.5l9 4.5 9-4.5M2 11.5l9 4.5 9-4.5"/></svg></span>
+            <span>
+              <span class="start-title">Aprofundar nos temas</span>
+              <span class="start-text">Cuidado, soberania alimentar e moradia: estudos com pesquisadores de movimentos sociais.</span>
+            </span>
+            <span class="start-arr"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4"/></svg></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
   </div>
-
 </section>
 
 <!-- ══ MAPA ════════════════════════════════════════════════════════════ -->
-<section class="map-section" id="mapa">
-  <div class="map-header reveal">
+<section class="section" id="mapa">
+  <div class="sec-head reveal">
     <div>
-      <div class="sec-tag" style="color:var(--ocre)"><span>Mapa de Iniciativas</span></div>
-      <h2 class="sec-title">Mais de 130 experiências pelo território</h2>
-      <p class="sec-desc" style="margin-top:10px;">
-        Incubadoras, núcleos, projetos e coletivos mapeados em todas as regiões. Filtre por região, tipo de instituição, rede e tema de atuação.
+      <div class="sec-tag" style="color:var(--ocre)"><span>Mapa de iniciativas</span></div>
+      <h2 class="sec-title">134 iniciativas em universidades de todas as regiões</h2>
+      <p class="sec-desc">
+        Incubadoras, núcleos, projetos e coletivos que atuam com movimentos sociais nos territórios. Filtre por região, tipo de instituição, rede e tema, abra o cartão de cada iniciativa e baixe os dados para suas próprias análises.
       </p>
     </div>
-    <a href="https://meyrele.github.io/Linha_7/" class="btn-primary" target="_blank">
-      <svg viewBox="0 0 14 14"><path d="M7 1l5 5-5 5M2 6h10"/></svg>
-      Abrir mapa completo
-    </a>
+    <div class="sec-actions">
+      <a href="https://meyrele.github.io/Linha_7/" class="btn-primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg>
+        Abrir mapa completo
+      </a>
+      <a href="https://forms.gle/HkU83W4qBvEHHf4RA" class="btn-outline" target="_blank" rel="noopener">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2v10M2 7h10"/></svg>
+        Cadastre ou atualize sua iniciativa
+      </a>
+    </div>
   </div>
 
-  <div class="map-preview-wrap reveal d1">
-    <div class="map-preview-inner">
+  <div class="preview reveal d1">
+    <div class="preview-inner">
       <iframe
         src="https://meyrele.github.io/Linha_7/"
-        title="Mapa de Iniciativas — Linha 7"
+        title="Prévia do mapa de iniciativas da Linha 7"
         scrolling="no"
         tabindex="-1"
       ></iframe>
     </div>
-    <div class="map-preview-overlay">
-      <a href="https://meyrele.github.io/Linha_7/" class="btn-open" target="_blank">
-        <svg viewBox="0 0 14 14"><path d="M2 12L12 2M6 2h6v6"/></svg>
+    <div class="preview-overlay">
+      <a href="https://meyrele.github.io/Linha_7/" class="btn-open" target="_blank" rel="noopener">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg>
         Abrir em tela cheia
       </a>
     </div>
   </div>
 
-  <div class="map-chips reveal d2">
-    <div class="map-chip"><div class="chip-dot" style="background:#C97C3E;"></div><span>Pública Federal</span></div>
-    <div class="map-chip"><div class="chip-dot" style="background:#7CA9A0;"></div><span>Pública Municipal</span></div>
-    <div class="map-chip"><div class="chip-dot" style="background:#7E4E34;"></div><span>Pública Estadual</span></div>
-    <div class="map-chip"><div class="chip-dot" style="background:#A7B74C;"></div><span>Privada Comunitária</span></div>
-  </div>
+  <!-- rótulos e cores copiados da legenda do mapa publicado -->
+  <ul class="chips reveal d2" aria-label="Legenda: tipo de instituição">
+    <li class="chip"><span class="chip-dot" style="background:var(--mapa-federal);"></span>Pública Federal</li>
+    <li class="chip"><span class="chip-dot" style="background:var(--mapa-estadual);"></span>Pública Estadual</li>
+    <li class="chip"><span class="chip-dot" style="background:var(--mapa-municipal);"></span>Pública Municipal</li>
+    <li class="chip"><span class="chip-dot" style="background:var(--mapa-privada);"></span>Privada Comunitária</li>
+  </ul>
 </section>
 
 <!-- ══ LINHA DO TEMPO ═══════════════════════════════════════════════════ -->
-<section class="timeline-section" id="linha-do-tempo">
-  <div class="timeline-header reveal">
+<section class="section section--areia" id="linha-do-tempo">
+  <div class="sec-head reveal">
     <div>
-      <div class="sec-tag" style="color:var(--sou-verde)"><span>Linha do Tempo</span></div>
-      <h2 class="sec-title">Trinta anos de história em cinco ciclos</h2>
-      <p class="sec-desc" style="margin-top:10px;">
-        Da redemocratização à reconstrução pós-pandemia — ações das universidades, dos movimentos sociais, legislação e políticas públicas em uma narrativa contínua.
+      <div class="sec-tag" style="color:var(--sou-verde)"><span>Linha do tempo</span></div>
+      <h2 class="sec-title">Mais de três décadas em cinco ciclos</h2>
+      <p class="sec-desc">
+        Ações de universidades e movimentos sociais, políticas públicas federais e legislação, organizadas em ciclos de emergência, institucionalização, transversalidade, desmonte e reconstrução. Veja o todo, entre em cada ciclo e chegue aos eventos com descrição e fontes.
       </p>
     </div>
-    <a href="https://meyrele.github.io/linha-do-tempo-linha-7/" class="btn-outline" target="_blank">
-      <svg viewBox="0 0 14 14"><path d="M7 1l5 5-5 5M2 6h10"/></svg>
-      Ver linha completa
+    <div class="sec-actions">
+      <a href="https://meyrele.github.io/linha-do-tempo-linha-7/" class="btn-outline" target="_blank" rel="noopener">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg>
+        Abrir linha do tempo completa
+      </a>
+    </div>
+  </div>
+
+  <div class="preview ldt-preview reveal d1">
+    <div class="preview-inner">
+      <img class="ldt-poster" src="assets/img/linha-do-tempo-aprovada.webp" alt="Linha do tempo com os cinco ciclos históricos" width="2400" height="1686">
+      <iframe
+        src="https://meyrele.github.io/linha-do-tempo-linha-7/"
+        title="Prévia da linha do tempo: iniciativas universitárias de economia solidária em cinco ciclos, de 1993 a 2025"
+        loading="lazy"
+        tabindex="-1"
+      ></iframe>
+    </div>
+    <div class="preview-overlay">
+      <a href="https://meyrele.github.io/linha-do-tempo-linha-7/" class="btn-open" target="_blank" rel="noopener">
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg>
+        Abrir linha do tempo completa
+      </a>
+    </div>
+  </div>
+
+  <!-- cores copiadas de ALL_DATA.cycles da linha do tempo publicada -->
+  <ul class="chips reveal d2" aria-label="Ciclos da linha do tempo">
+    <li class="chip"><span class="chip-dot" style="background:var(--ciclo-1);"></span><span><strong>Ciclo 1</strong> · Emergência das iniciativas nas universidades · 1993–2002</span></li>
+    <li class="chip"><span class="chip-dot" style="background:var(--ciclo-2);"></span><span><strong>Ciclo 2</strong> · Institucionalização das políticas públicas · 2003–2010</span></li>
+    <li class="chip"><span class="chip-dot" style="background:var(--ciclo-3);"></span><span><strong>Ciclo 3</strong> · Transversalidade e redes · 2011–2015</span></li>
+    <li class="chip"><span class="chip-dot" style="background:var(--ciclo-4);"></span><span><strong>Ciclo 4</strong> · Desmonte das políticas públicas · 2016–2022</span></li>
+    <li class="chip"><span class="chip-dot" style="background:var(--ciclo-5);"></span><span><strong>Ciclo 5</strong> · Reconstrução e reinvenção · 2023–2025</span></li>
+  </ul>
+</section>
+
+<!-- ══ ESTUDOS TEMÁTICOS ════════════════════════════════════════════════ -->
+<section class="section section--areia" id="estudos">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-tag" style="color:var(--sou-magenta)"><span>Estudos temáticos</span></div>
+      <h2 class="sec-title">Três lutas por direitos, vistas de dentro das iniciativas</h2>
+      <p class="sec-desc">
+        Textos e vídeo-animações construídos com pesquisadoras e pesquisadores de movimentos sociais, a partir de seis reuniões-entrevistas realizadas em 2025 com iniciativas da USP, Unifesp, UFRN, UFBA, UFRJ e UFSCar.
+      </p>
+    </div>
+  </div>
+
+  <div class="study-grid">
+    <a href="pages/estudos-tematicos.html#cuidado" class="study-card acc-magenta reveal d1">
+      <div class="card-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 19s-7.5-4.5-7.5-10A4 4 0 0 1 11 6.5 4 4 0 0 1 18.5 9c0 5.5-7.5 10-7.5 10z"/></svg></div>
+      <h3 class="study-title">Trabalho reprodutivo e cuidado</h3>
+      <p class="study-text">O cuidado no centro do debate econômico. O estudo mostra como iniciativas de economia solidária, em parceria com a universidade, reconhecem o trabalho reprodutivo como força que organiza a resistência e sustenta a vida nos territórios.</p>
+      <span class="study-link">Ler o estudo <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg></span>
+    </a>
+
+    <a href="pages/estudos-tematicos.html#soberania-alimentar" class="study-card acc-verde reveal d2">
+      <div class="card-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 20v-9"/><path d="M11 11C11 7 8.5 3.5 4 3.5 4 8 6.5 11 11 11z"/><path d="M11 14c0-3.5 2.5-6 7-6 0 4-2.5 6-7 6z"/></svg></div>
+      <h3 class="study-title">Soberania e segurança alimentar</h3>
+      <p class="study-text">Diante das desigualdades do modelo agroexportador, a aliança entre ciência, agricultura familiar e movimentos sociais promove a agroecologia, circuitos curtos de comercialização e o direito a alimentos saudáveis.</p>
+      <span class="study-link">Ler o estudo <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg></span>
+    </a>
+
+    <a href="pages/estudos-tematicos.html#moradia" class="study-card acc-azul reveal d3">
+      <div class="card-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M3 10l8-7 8 7"/><path d="M5 8.5V19h12V8.5"/><path d="M9 19v-5h4v5"/></svg></div>
+      <h3 class="study-title">Moradia e território</h3>
+      <p class="study-text">A luta por habitação disputa o direito à cidade. O estudo reúne experiências em que o apoio universitário a mutirões, cooperativas e ocupações consolida territórios solidários e autogeridos.</p>
+      <span class="study-link">Ler o estudo <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg></span>
     </a>
   </div>
+</section>
 
-  <div class="timeline-img-wrap reveal d1" onclick="openZoom()">
-    <img src="assets/img/linha-do-tempo-aprovada.jpg" alt="Linha do Tempo — Cinco Ciclos Históricos" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-    <div class="timeline-img-placeholder" style="display:none;height:320px;background:var(--areia);align-items:center;justify-content:center;flex-direction:column;gap:12px;">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="var(--cinza-claro)" stroke-width="1.5"><rect x="4" y="8" width="32" height="24" rx="3"/><path d="M4 28l8-8 6 6 5-5 9 9"/><circle cx="14" cy="16" r="3"/></svg>
-      <span style="font-family:var(--f-d);font-size:12px;color:var(--cinza-claro);">Coloque APROVADA.jpg na mesma pasta</span>
-    </div>
-    <div class="timeline-img-overlay">
-      <div class="zoom-pill">
-        <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="5"/><path d="M12 12l3 3M5 7h4M7 5v4"/></svg>
-        <span>Ampliar</span>
-      </div>
-    </div>
+<!-- ══ RECURSOS ═════════════════════════════════════════════════════════ -->
+<section class="section" id="recursos">
+  <div class="reveal">
+    <div class="sec-tag" style="color:var(--sou-laranja)"><span>Recursos</span></div>
+    <h2 class="sec-title">Para chegar ao tema e ir mais fundo</h2>
   </div>
 
-  <div class="cycle-chips reveal d2">
-    <div class="cycle-chip"><div class="cy-dot" style="background:#c17f3b;"></div><span class="cy-text">Ciclo 1 · Emergência nas Universidades · 1993–2002</span></div>
-    <div class="cycle-chip"><div class="cy-dot" style="background:#b85c3a;"></div><span class="cy-text">Ciclo 2 · Institucionalização · 2003–2010</span></div>
-    <div class="cycle-chip"><div class="cy-dot" style="background:#7CA9A0;"></div><span class="cy-text">Ciclo 3 · Transversalidade e Redes · 2011–2015</span></div>
-    <div class="cycle-chip"><div class="cy-dot" style="background:#7E4E34;"></div><span class="cy-text">Ciclo 4 · Desmonte das Políticas · 2016–2022</span></div>
-    <div class="cycle-chip"><div class="cy-dot" style="background:#A7B74C;"></div><span class="cy-text">Ciclo 5 · Reconstrução e Reinvenção · 2023–2025</span></div>
+  <div class="cards-grid">
+    <a href="pages/glossario.html" class="nav-card acc-magenta reveal d1">
+      <div class="card-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 18.5A2.5 2.5 0 016.5 16H20M4 18.5A2.5 2.5 0 014 16V4h16v12H6.5"/><path d="M8 9h6M8 13h4"/></svg></div>
+      <h3 class="card-title">Glossário</h3>
+      <p class="card-body">Termos e conceitos fundamentais do debate, em linguagem acessível para quem chega ao tema pela primeira vez.</p>
+      <div class="card-arr"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
+    </a>
+
+    <a href="pages/biblioteca.html" class="nav-card acc-azul reveal d2">
+      <div class="card-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M3.5 4h4v15h-4zM9.5 4h4v15h-4z"/><path d="M15 5.2l3.4-.9 3.1 14.3-3.4.9z"/></svg></div>
+      <h3 class="card-title">Biblioteca básica</h3>
+      <p class="card-body">Referências bibliográficas e audiovisuais, o e-book Comunicação Popular e Ciência (2024) e as 15 aulas do curso Economia Solidária e Autogestão de Comuns.</p>
+      <div class="card-arr"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
+    </a>
+
+    <a href="pages/agenda-de-futuros.html" class="nav-card acc-verde reveal d3">
+      <div class="card-icon"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M3 17l5-5 4 4 7-8"/><path d="M14 8h5v5"/></svg></div>
+      <h3 class="card-title">Agenda de futuros <span class="tag-construcao">Em construção</span></h3>
+      <p class="card-body">Diretrizes para políticas públicas e para uma extensão transformadora, construídas a partir das iniciativas mapeadas.</p>
+      <div class="card-arr"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
+    </a>
   </div>
 </section>
 
 <!-- ══ SOBRE ════════════════════════════════════════════════════════════ -->
-<section class="about-section" id="sobre">
+<section class="section section--areia about-section" id="sobre">
   <div class="reveal">
     <div class="sec-tag" style="color:var(--sou-magenta)"><span>O projeto</span></div>
-    <h2 class="sec-title">Uma universidade invisível que precisa ser vista</h2>
-    <div class="about-quote">
-      <p>"Há décadas, iniciativas nas universidades constroem, junto a movimentos sociais, caminhos para outra economia — solidária, feminista e ecológica."</p>
-      <cite>Inspirado no conceito de Universidade Necessária · Darcy Ribeiro</cite>
-    </div>
+    <h2 class="sec-title">Da universidade invisível à universidade necessária</h2>
     <div class="about-body">
-      <p>O Painel da Linha 7 documenta, mapeia e divulga a presença nas universidades brasileiras de iniciativas dedicadas à construção de uma economia solidária, feminista e ecológica. Incubadoras, núcleos, projetos e coletivos que, por décadas, atuaram ao lado de comunidades e movimentos populares.</p>
-      <p>Em um cenário de múltiplas crises — climática, democrática, social — este painel torna visível o que sempre existiu: uma universidade comprometida com a transformação.</p>
+      <p>Nas pesquisas do Centro SoU_Ciência sobre percepção pública da ciência, identificamos uma onda pró-ciência durante a pandemia de Covid-19. As universidades, centros da produção científica do país, não se beneficiaram desse reconhecimento: seguem alvo de ataques e pouco conhecidas em sua atuação junto à sociedade.</p>
+      <p>Inspirado no conceito de Universidade Necessária, de Darcy Ribeiro, este painel dá visibilidade a uma universidade invisível: programas, núcleos, incubadoras e coletivos que há décadas trabalham com movimentos sociais em práticas de cooperação e cuidado, trabalho associado e autogerido, tecnologias sociais e sustentáveis.</p>
+      <p>O painel resulta da Linha de Pesquisa 7 do SoU_Ciência e é construído de forma progressiva e colaborativa: convive com dados incompletos, aceita atualizações e será validado com as redes universitárias antes de cada etapa de publicação.</p>
     </div>
   </div>
 
   <div class="reveal d2">
-    <div class="sec-tag" style="color:var(--sou-azul)"><span>Cinco ciclos históricos</span></div>
-    <div class="cycles-list">
-      <div class="cycle-row">
-        <span class="cycle-n">1</span>
-        <div class="cycle-info"><div class="cycle-name">Emergência nas Universidades</div><div class="cycle-period">1993–2002</div></div>
-        <div class="cycle-track"><div class="cycle-fill" style="width:60%;background:#c17f3b;"></div></div>
-      </div>
-      <div class="cycle-row">
-        <span class="cycle-n">2</span>
-        <div class="cycle-info"><div class="cycle-name">Institucionalização das Políticas Públicas</div><div class="cycle-period">2003–2010</div></div>
-        <div class="cycle-track"><div class="cycle-fill" style="width:85%;background:#b85c3a;"></div></div>
-      </div>
-      <div class="cycle-row">
-        <span class="cycle-n">3</span>
-        <div class="cycle-info"><div class="cycle-name">Transversalidade e Redes</div><div class="cycle-period">2011–2015</div></div>
-        <div class="cycle-track"><div class="cycle-fill" style="width:68%;background:#7CA9A0;"></div></div>
-      </div>
-      <div class="cycle-row">
-        <span class="cycle-n">4</span>
-        <div class="cycle-info"><div class="cycle-name">Desmonte das Políticas Públicas</div><div class="cycle-period">2016–2022</div></div>
-        <div class="cycle-track"><div class="cycle-fill" style="width:50%;background:#7E4E34;"></div></div>
-      </div>
-      <div class="cycle-row">
-        <span class="cycle-n">5</span>
-        <div class="cycle-info"><div class="cycle-name">Reconstrução e Reinvenção</div><div class="cycle-period">2023–2025</div></div>
-        <div class="cycle-track"><div class="cycle-fill" style="width:35%;background:#A7B74C;"></div></div>
-      </div>
-    </div>
+    <blockquote class="about-quote">
+      <p>A história é aberta, está em disputa e movimento. Ao aproximar universidade, ciência e movimentos sociais, essas iniciativas trazem contribuições para a construção de agendas de futuros.</p>
+      <cite>Equipe da Linha 7 · SoU_Ciência</cite>
+    </blockquote>
+    <ul class="about-links">
+      <li><a href="pages/equipe.html">Conheça a equipe <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg></a></li>
+      <li><a href="pages/metodologia.html">Como o painel foi construído <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1l5 5-5 5M2 6h10"/></svg></a></li>
+      <li><a href="https://souciencia.unifesp.br/" target="_blank" rel="noopener">Centro SoU_Ciência <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg></a></li>
+    </ul>
   </div>
 </section>
 
-<!-- ══ CARDS ════════════════════════════════════════════════════════════ -->
-<section class="cards-section" id="explorar">
-  <div class="reveal">
-    <div class="sec-tag" style="color:var(--sou-laranja)"><span>Explore o painel</span></div>
-    <h2 class="sec-title">Navegue pelo painel</h2>
-    <p class="sec-desc" style="margin-top:10px;">Da visualização geográfica à leitura histórica e conceitual — cada seção abre um caminho diferente.</p>
-  </div>
+</main>
 
-  <div class="cards-grid">
-    <a href="#mapa" class="nav-card reveal d1" style="--c-acc:#b86e1f;--c-bg:#fde8c4;">
-      <div class="card-icon"><svg viewBox="0 0 22 22" fill="none" stroke="#8a4e10" stroke-width="1.5"><path d="M11 2C7.69 2 5 4.69 5 8c0 4.75 6 12 6 12s6-7.25 6-12c0-3.31-2.69-6-6-6z"/><circle cx="11" cy="8" r="2.5"/></svg></div>
-      <div class="card-eyebrow">Visualização</div>
-      <h3 class="card-title">Mapa de Iniciativas</h3>
-      <p class="card-body">130+ iniciativas pelo território. Filtre por região, rede e tema.</p>
-      <div class="card-arr"><svg viewBox="0 0 12 12"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
-    </a>
-
-    <a href="https://meyrele.github.io/linha-do-tempo-linha-7/" class="nav-card reveal d2" target="_blank" style="--c-acc:#a63318;--c-bg:#fde0d4;">
-      <div class="card-icon" style="background:#fde0d4;"><svg viewBox="0 0 22 22" fill="none" stroke="#7a2410" stroke-width="1.5"><path d="M3 11h16M3 11l3-3M3 11l3 3"/><circle cx="9" cy="11" r="1.5" fill="#7a2410"/><circle cx="15" cy="11" r="1.5" fill="#7a2410"/></svg></div>
-      <div class="card-eyebrow">História</div>
-      <h3 class="card-title">Linha do Tempo</h3>
-      <p class="card-body">Cinco ciclos históricos da economia solidária nas universidades.</p>
-      <div class="card-arr" style="background:#fde0d4;"><svg viewBox="0 0 12 12" stroke="#7a2410"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
-    </a>
-
-    <a href="#" class="nav-card reveal d3" style="--c-acc:#00a086;--c-bg:#d6f2ec;">
-      <div class="card-icon" style="background:#d6f2ec;"><svg viewBox="0 0 22 22" fill="none" stroke="#007a65" stroke-width="1.5"><path d="M11 2L2 7l9 4.5 9-4.5-9-5zM2 15.5l9 4.5 9-4.5M2 11.5l9 4.5 9-4.5"/></svg></div>
-      <div class="card-eyebrow">Aprofundamento</div>
-      <h3 class="card-title">Estudos Temáticos</h3>
-      <p class="card-body">Textos e vídeo-animações sobre soberania, cuidado e habitação.</p>
-      <div class="card-arr" style="background:#d6f2ec;"><svg viewBox="0 0 12 12" stroke="#007a65"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
-    </a>
-
-    <a href="#" class="nav-card reveal d4" style="--c-acc:#c4245a;--c-bg:#fce4ed;">
-      <div class="card-icon" style="background:#fce4ed;"><svg viewBox="0 0 22 22" fill="none" stroke="#9a1844" stroke-width="1.5"><path d="M4 18.5A2.5 2.5 0 016.5 16H20M4 18.5A2.5 2.5 0 014 16V4h16v12H6.5"/><path d="M8 9h6M8 13h4"/></svg></div>
-      <div class="card-eyebrow">Conceitos</div>
-      <h3 class="card-title">Glossário</h3>
-      <p class="card-body">Termos-chave do debate para quem chega ao tema pela primeira vez.</p>
-      <div class="card-arr" style="background:#fce4ed;"><svg viewBox="0 0 12 12" stroke="#9a1844"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
-    </a>
-
-    <a href="#" class="nav-card reveal d5" style="--c-acc:#1e7ec8;--c-bg:#daeef8;">
-      <div class="card-icon" style="background:#daeef8;"><svg viewBox="0 0 22 22" fill="none" stroke="#145e9a" stroke-width="1.5"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="13" y="3" width="6" height="6" rx="1"/><rect x="3" y="13" width="6" height="6" rx="1"/><rect x="13" y="13" width="6" height="6" rx="1"/></svg></div>
-      <div class="card-eyebrow">Síntese</div>
-      <h3 class="card-title">Panorama</h3>
-      <p class="card-body">Dados e análises sobre distribuição regional, redes e tipos institucionais.</p>
-      <div class="card-arr" style="background:#daeef8;"><svg viewBox="0 0 12 12" stroke="#145e9a"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
-    </a>
-
-    <a href="#" class="nav-card reveal d6" style="--c-acc:#5c5650;--c-bg:#eceae6;">
-      <div class="card-icon" style="background:#eceae6;"><svg viewBox="0 0 22 22" fill="none" stroke="#3a352e" stroke-width="1.5"><circle cx="11" cy="11" r="3"/><path d="M18 4.9l-1.3 1.3M4.9 4.9l1.3 1.3M4.9 17.1l1.3-1.3M18 17.1l-1.3-1.3M11 2v2M11 18v2M2 11h2M18 11h2"/></svg></div>
-      <div class="card-eyebrow">Transparência</div>
-      <h3 class="card-title">Metodologia</h3>
-      <p class="card-body">Critérios, fontes, equipe e limites do levantamento.</p>
-      <div class="card-arr" style="background:#eceae6;"><svg viewBox="0 0 12 12" stroke="#3a352e"><path d="M2 10L10 2M4 2h6v6"/></svg></div>
-    </a>
-  </div>
-</section>
-
-<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
-<footer id="contato">
+<!-- ══ RODAPÉ ═══════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="assets/img/souciencia-logo.svg" alt="SoU_Ciência">
-      <p>Centro de Estudos Sociedade, Universidade e Ciência — think tank vinculado à Unifesp. Comprometido com ciência aberta, transparência e divulgação baseada em evidências.</p>
+      <img src="assets/img/souciencia-logo-claro.svg" alt="SoU_Ciência" width="163" height="38">
+      <p>Centro de Estudos Sociedade, Universidade e Ciência — think tank vinculado à Unifesp, fundado em 2021. Ciência aberta, transparência de dados e divulgação baseada em evidências.</p>
     </div>
     <div>
       <div class="footer-label">Painel</div>
       <ul class="footer-links">
-        <li><a href="#">Mapa de Iniciativas</a></li>
-        <li><a href="#">Linha do Tempo</a></li>
-        <li><a href="#">Estudos Temáticos</a></li>
-        <li><a href="#">Glossário</a></li>
-        <li><a href="#">Panorama</a></li>
-        <li><a href="#">Metodologia</a></li>
+        <li><a href="#mapa">Mapa de iniciativas</a></li>
+        <li><a href="#linha-do-tempo">Linha do tempo</a></li>
+        <li><a href="#estudos">Estudos temáticos</a></li>
+        <li><a href="pages/glossario.html">Glossário</a></li>
+        <li><a href="pages/biblioteca.html">Biblioteca básica</a></li>
+        <li><a href="pages/agenda-de-futuros.html">Agenda de futuros</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-label">Sobre</div>
       <ul class="footer-links">
-        <li><a href="https://souciencia.unifesp.br/" target="_blank">SoU_Ciência · Unifesp</a></li>
-        <li><a href="#">Linha de Pesquisa 7</a></li>
-        <li><a href="#">Equipe</a></li>
-        <li><a href="#">E-book 2024</a></li>
+        <li><a href="https://souciencia.unifesp.br/" target="_blank" rel="noopener">SoU_Ciência</a></li>
+        <li><a href="pages/equipe.html">Equipe</a></li>
+        <li><a href="pages/metodologia.html">Metodologia</a></li>
+        <li><a href="https://forms.gle/HkU83W4qBvEHHf4RA" target="_blank" rel="noopener">Cadastre sua iniciativa</a></li>
       </ul>
     </div>
   </div>
@@ -363,12 +351,6 @@
     <span class="cc">CC BY 4.0</span>
   </div>
 </footer>
-
-<!-- ══ ZOOM ══════════════════════════════════════════════════════════════ -->
-<div class="zoom-overlay" id="zoomOverlay" onclick="closeZoom()">
-  <div class="zoom-close" onclick="closeZoom()">×</div>
-  <img src="assets/img/linha-do-tempo-aprovada.jpg" alt="Linha do Tempo ampliada">
-</div>
 
 <script src="assets/js/main.js"></script>
 </body>
