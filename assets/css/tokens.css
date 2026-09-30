@@ -16,6 +16,22 @@
   --ocre-palido:  #fde8c4;
   --ocre-bg:      #fff8ef;
   --terracota:    #a63318;
+  --ocre-escuro:  #8a4e10;
+
+  /* Ciclos — copiados de ALL_DATA.cycles da linha do tempo publicada
+     (https://meyrele.github.io/linha-do-tempo-linha-7/) */
+  --ciclo-1:      #C97C3E;
+  --ciclo-2:      #BD3838;
+  --ciclo-3:      #7CA9A0;
+  --ciclo-4:      #7E4E34;
+  --ciclo-5:      #A7B74C;
+
+  /* Tipos de instituição — copiados da legenda do mapa publicado
+     (https://meyrele.github.io/Linha_7/) */
+  --mapa-federal:   #D6342F;
+  --mapa-estadual:  #1F73B8;
+  --mapa-municipal: #B8860B;
+  --mapa-privada:   #1A1A1A;
 
   /* Cores do logo SoU_Ciência */
   --sou-verde:    #00a086;

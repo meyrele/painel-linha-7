@@ -1,6 +1,6 @@
 # Universidades em rede pela Economia Solidária: mapa, memória e movimento
 
-Hub do painel de pesquisa da Linha 7 do [SoU_Ciência](https://souciencia.unifesp.br/) (Unifesp). Site estático que reúne e apresenta os produtos do painel: mapa de iniciativas, linha do tempo, estudos temáticos, glossário, panorama e metodologia.
+Hub do painel de pesquisa da Linha 7 do [SoU_Ciência](https://souciencia.unifesp.br/) (Unifesp). Site estático que reúne e apresenta os produtos do painel: mapa de iniciativas, linha do tempo, estudos temáticos, glossário, biblioteca básica, agenda de futuros, equipe e metodologia.
 
 **No ar:** https://meyrele.github.io/painel-linha-7/
 
@@ -16,7 +16,7 @@ Depois abrir http://localhost:8000/ no navegador. Não há etapa de build: HTML,
 
 ## Repositórios relacionados
 
-Dois produtos do painel têm repositório e publicação próprios; esta home apenas aponta para eles (e incorpora o mapa via iframe):
+Dois produtos do painel têm repositório e publicação próprios; esta home apenas aponta para eles (e incorpora prévias dos dois via iframe):
 
 | Produto              | Publicado em                                       |
 |----------------------|----------------------------------------------------|
@@ -26,7 +26,7 @@ Dois produtos do painel têm repositório e publicação próprios; esta home ap
 ## Estrutura
 
 - `index.html`: home
-- `pages/`: páginas internas (a criar)
+- `pages/`: páginas internas (estudos temáticos, glossário, biblioteca, agenda de futuros, equipe, metodologia)
 - `assets/`: CSS, JS e imagens
 - `content/`: reservado para o documento-guia do painel, mantido apenas localmente (não versionado)
 

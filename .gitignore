@@ -13,3 +13,10 @@ desktop.ini
 # Fica apenas na cópia local; não publicar no repositório público.
 content/*
 !content/.gitkeep
+
+# Imagem original da linha do tempo (~11 MB): fica só na cópia local.
+# O site usa assets/img/linha-do-tempo-aprovada.webp (2400 px, qualidade 82).
+assets/img/linha-do-tempo-aprovada.jpg
+
+# Capturas de tela da verificação local (Playwright)
+verificacao/
