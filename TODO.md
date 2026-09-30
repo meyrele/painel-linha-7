@@ -15,11 +15,11 @@
 - [ ] Agenda de futuros: texto com as proposições "Por uma extensão transformadora" (`pages/agenda-de-futuros.html`; documento-guia 2.7 ainda marca "incluir proposições").
 - [ ] Biblioteca: lista de referências bibliográficas e audiovisuais (hoje só um aviso) e link público do e-book Comunicação Popular e Ciência (2024) — o link do documento-guia é interno.
 - [ ] Biblioteca: capa de divulgação do curso UAES (documento-guia 1.3.6.2.3.1 pede imagem da capa e, talvez, uma imagem por aula).
-- [ ] Equipe: abertura da página foi redigida nesta rodada (não vem do documento-guia); validar com a equipe.
+- [ ] Equipe: abertura da página foi redigida na rodada de 30/09 (não vem do documento-guia); validar com a equipe.
+- [ ] Foto de iniciativa para a seção Sobre (pedir às seis iniciativas entrevistadas; horizontal, luz natural, com crédito e autorização). O bloco `<figure class="foto-sobre">` já está no `index.html`, oculto por CSS.
 
 ## Pendências da página de equipe (omitidas até completar)
 
-- [ ] Equipe técnica e de dados: Meyrele Torres Nascimento (descrição pendente, "descrição" marcado no documento-guia).
 - [ ] Equipe técnica e de dados: Marina Mendes da Costa foi publicada sem descrição (no documento-guia está "Marina Mendes da Costa -"); completar.
 - [ ] Equipe de comunicação: Mariana (sobrenome e descrição pendentes, "XXX").
 - [ ] Revisão textual: Emilene (nome incompleto, "Emilene…"); o bloco "Revisão textual" inteiro ficou fora da página.
@@ -34,7 +34,6 @@
 ## Manutenção
 
 - [ ] Números da home (134 iniciativas, 30+ anos, 3 estudos) são fixos no HTML; atualizar quando o mapa mudar.
-- [ ] Nomes dos ciclos na home seguem o briefing desta rodada; o ciclo 4 no site da linha do tempo se chama "Desmonte das políticas públicas e Resistência". Decidir se a home acompanha.
 
 ## Documento-guia
 
