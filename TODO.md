@@ -40,7 +40,8 @@ Rodapé, coluna "Sobre":
 - [ ] Logo no rodapé: o protótipo previa um `.jpg`; o insumo disponível é um SVG com texto preto, que fica pouco legível sobre o fundo escuro do rodapé. Avaliar versão negativa (texto branco) do logo.
 - [ ] Texto de fallback da imagem da linha do tempo ainda diz "Coloque APROVADA.jpg na mesma pasta".
 - [ ] Legenda de chips abaixo do mapa na home (Federal/Municipal/Estadual/Privada em ocre/verde-água/marrom/oliva) não corresponde às cores do mapa publicado (vermelho/azul/amarelo/preto).
-- [ ] Sem favicon: o navegador recebe 404 em `/favicon.ico`. Criar um a partir do símbolo do logo SoU_Ciência.
+- [x] Favicon: `assets/img/favicon.svg` (símbolo do logo SoU_Ciência), ligado no `<head>` do `index.html`. Novas páginas em `pages/` devem usar `../assets/img/favicon.svg`.
+- [ ] Favicon em PNG (ex.: `apple-touch-icon` 180×180) para Safari antigo e atalho na tela inicial do iPhone, que não usam SVG.
 - [ ] Card "Mapa de Iniciativas" (seção Explorar) aponta para a âncora `#mapa` da própria home; decidir se deve abrir o mapa publicado, como o card da Linha do Tempo.
 
 ## Desempenho
