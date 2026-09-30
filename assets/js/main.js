@@ -42,12 +42,19 @@ if (reveals.length) {
 const counters = document.querySelectorAll('[data-count]');
 if (counters.length && !reduceMotion) {
   const DURACAO = 900;
+  const ATRASO = 240;  // mesmo atraso da entrada dos indicadores no hero (home.css)
   const easeOut = t => 1 - Math.pow(1 - t, 3);
-  const run = el => {
+  const run = async el => {
     const alvo = Number(el.dataset.count);
-    const t0 = performance.now();
+    // fixa a largura do valor final (os algarismos da Playfair têm larguras diferentes);
+    // mede só com a fonte carregada, trocando o texto no mesmo quadro
+    await document.fonts.ready;
+    el.textContent = alvo;
+    el.style.minWidth = el.getBoundingClientRect().width + 'px';
+    el.textContent = '0';
+    const t0 = performance.now() + ATRASO;
     const tick = now => {
-      const t = Math.min(1, (now - t0) / DURACAO);
+      const t = Math.max(0, Math.min(1, (now - t0) / DURACAO));
       el.textContent = Math.round(alvo * easeOut(t));
       if (t < 1) requestAnimationFrame(tick);
     };

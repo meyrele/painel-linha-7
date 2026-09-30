@@ -295,8 +295,12 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
   border: 1px solid transparent;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out;
+  transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out, transform 160ms ease-out;
 }
+
+/* resposta ao clique */
+.btn-primary:active,
+.btn-outline:active { transform: scale(.97); }
 
 .btn-primary svg,
 .btn-outline svg,
@@ -451,4 +455,5 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .row-arr, .row-title, .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { transition: none; }
+  .btn-primary:active, .btn-outline:active { transform: none; }
 }
