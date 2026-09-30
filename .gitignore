@@ -1,0 +1,15 @@
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Fontes (Aquawax Pro com licença pendente — não versionar nenhuma fonte)
+*.woff
+*.woff2
+*.otf
+*.ttf
+
+# Documento-guia: contém links internos (planilhas, formulários, gravações de entrevistas).
+# Fica apenas na cópia local; não publicar no repositório público.
+content/*
+!content/.gitkeep

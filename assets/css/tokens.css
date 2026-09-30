@@ -1,0 +1,28 @@
+:root {
+  --f-d: 'Plus Jakarta Sans', sans-serif;
+  --f-b: 'DM Sans', sans-serif;
+
+  /* Paleta base */
+  --branco:       #ffffff;
+  --areia:        #f4f0e8;
+  --areia-borda:  #e2dbd0;
+  --carvao:       #1e1a14;
+  --cinza:        #5c5650;
+  --cinza-claro:  #9a9490;
+
+  /* Ocre/terra — da linha do tempo e mapa */
+  --ocre:         #b86e1f;
+  --ocre-claro:   #d9881f;
+  --ocre-palido:  #fde8c4;
+  --ocre-bg:      #fff8ef;
+  --terracota:    #a63318;
+
+  /* Cores do logo SoU_Ciência */
+  --sou-verde:    #00a086;
+  --sou-magenta:  #c4245a;
+  --sou-azul:     #1e7ec8;
+  --sou-laranja:  #e85d1a;
+
+  --sombra-s:  rgba(30,26,20,.06);
+  --sombra-m:  rgba(30,26,20,.1);
+}
