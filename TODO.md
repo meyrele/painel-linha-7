@@ -15,17 +15,30 @@
 - [ ] Agenda de futuros: texto com as proposições "Por uma extensão transformadora" (`pages/agenda-de-futuros.html`; documento-guia 2.7 ainda marca "incluir proposições").
 - [ ] Biblioteca: lista de referências bibliográficas e audiovisuais (hoje só um aviso) e link público do e-book Comunicação Popular e Ciência (2024) — o link do documento-guia é interno.
 - [ ] Biblioteca: capa de divulgação do curso UAES (documento-guia 1.3.6.2.3.1 pede imagem da capa e, talvez, uma imagem por aula).
-- [ ] Equipe: abertura da página foi redigida na rodada de 30/09 (não vem do documento-guia); validar com a equipe.
-- [ ] Foto de iniciativa para a seção Sobre (pedir às seis iniciativas entrevistadas; horizontal, luz natural, com crédito e autorização). O bloco `<figure class="foto-sobre">` já está no `index.html`, oculto por CSS.
+- [ ] Foto de iniciativa para o bloco Quem somos (pedir às seis iniciativas entrevistadas; horizontal, luz natural, com crédito e autorização). O `<figure class="foto-sobre">` está em `pages/o-projeto.html#quem-somos`, oculto por CSS.
 
-## Pendências da página de equipe (omitidas até completar)
+## Aguardando a equipe (rodada de 15/10)
+
+- [ ] Texto do bloco "O painel" no hero da home: os dois parágrafos são provisórios (marcados com comentário no `index.html`).
+- [ ] Ícones de redes sociais no rodapé (Instagram, Facebook, LinkedIn, YouTube): faltam as URLs.
+- [ ] Rodapé, coluna Atualização: "Exclua sua iniciativa" e "Contato" aguardam decisão (destino e formulário).
+- [ ] Links do artigo SciELO ("onda pró-ciência") e do "artigo de 2023" citados na Apresentação e na Metodologia.
+- [ ] Ícones dos quatro tipos de iniciativa (incubadoras, núcleos, projetos contínuos, coletivos) no bloco O Mapa.
+- [ ] Logos dos parceiros (UAES, Instituto Paul Singer) em Quem somos.
+- [ ] Vídeo-animações dos três estudos: trocar o texto de cada `.video-slot` na home por um `<iframe>` do YouTube.
+- [ ] Título e botão da seção Estudos temáticos na home (o docx propõe "Três eixos temáticos de estudo sobre a luta por direitos nos territórios" e botões "Ler estudo completo"; mantidos os atuais nesta rodada).
+- [ ] Textos de chamada das seções Mapa, Linha do tempo e Estudos ("Alterar o texto abaixo" no docx, sem texto novo).
+- [ ] Destino de Glossário, Biblioteca e Agenda de futuros: o docx os coloca como botões da página "O projeto"; nesta rodada seguem como páginas próprias.
+- [ ] Revisar no docx: "a ”onda pró-ciência”" (aspas de fechamento na abertura, Apresentação) e "é um ferramenta interativa" (O Mapa), mantidos como no original.
+
+## Pendências da lista Quem somos (omitidas até completar)
 
 - [ ] Equipe técnica e de dados: Marina Mendes da Costa foi publicada sem descrição (no documento-guia está "Marina Mendes da Costa -"); completar.
 - [ ] Equipe de comunicação: Mariana (sobrenome e descrição pendentes, "XXX").
 - [ ] Revisão textual: Emilene (nome incompleto, "Emilene…"); o bloco "Revisão textual" inteiro ficou fora da página.
 - [ ] Parceiros: redes parceiras ("Redes…").
 
-## Pendências da página de metodologia
+## Pendências do bloco Metodologia
 
 - [ ] Omitidas as anotações internas do fim do item 2.11: "Referências", "Citar conteúdo do 'Delineamento da pesquisa' e 'Mapa Mental' — incluir quadros?" e "Danilo".
 - [ ] Lista de referências citadas no texto (Holliday, 2006; Falkembach, 2007; CFES, 2012; Centro SoU_Ciência, 2021) ainda não existe.

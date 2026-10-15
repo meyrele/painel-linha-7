@@ -30,14 +30,25 @@ Publicado em: https://meyrele.github.io/painel-linha-7/
 
 ```
 index.html          home do painel
-pages/              estudos-tematicos, glossario, biblioteca, agenda-de-futuros, equipe, metodologia
+pages/              o-projeto, estudos-tematicos, glossario, biblioteca, agenda-de-futuros
+                    (equipe.html e metodologia.html só redirecionam para o-projeto.html)
 assets/css/         tokens.css (variáveis :root) + base.css (compartilhado) + home.css + pages.css
-assets/js/          main.js (compartilhado: menu mobile, fios e entradas, contadores, pôster da prévia da linha do tempo)
+assets/js/          main.js (compartilhado: menu mobile, submenu Sobre, fios e entradas, contadores, pôster da prévia da linha do tempo, barra de âncoras)
 assets/img/         logos SoU_Ciência (normal e claro), favicons, imagem da linha do tempo (.webp) e aquarela do hero (aquarela-hero.webp)
-content/            documento-guia (.docx original + .md convertido + media/), SÓ LOCAL
+content/            documento-guia e Ajustes_linha_7.docx (+ .md convertidos), SÓ LOCAL
 ```
 
 O conteúdo de `content/` **não é versionado** (`.gitignore`): o documento-guia tem links internos (planilhas, formulário de edição, gravações e transcrições de entrevistas) e o repositório é público. Usar como referência local; não mover para outra pasta versionada nem copiar links internos para páginas do site.
+
+## Arquitetura do conteúdo
+
+- **Subtítulo no plural:** "Mapa, memória e movimentos" (nunca "movimento").
+- **Hero em três pesos:** H1 "Universidades em rede pela Economia Solidária" (Playfair 400) → subtítulo "Mapa, memória e movimentos" (Playfair itálico, cada palavra na sua cor de produto; vírgula e "e" em cinza) → linha de apoio (DM Sans 17px). À direita, o bloco "O painel" (texto provisório, marcado no HTML) com links para Quem somos e Metodologia.
+- **Cores de produto** (`tokens.css`): `--cor-mapa` (azul, Mapa), `--cor-memoria` (magenta, Linha do tempo), `--cor-movimentos` (verde, Estudos temáticos). Usadas no subtítulo e nos itens correspondentes do menu.
+- **Navbar:** logo · nome do painel · Sobre (submenu: Apresentação, Quem somos, Metodologia) · Mapa · Linha do tempo · Estudos temáticos · Glossário · Biblioteca · Agenda de futuros. Hambúrguer a partir de 1100px; entre 1101 e 1399px o nome quebra em duas linhas.
+- **Página "O projeto"** (`pages/o-projeto.html`): reúne o conteúdo institucional em blocos com âncora — `#apresentacao`, `#quem-somos`, `#metodologia`, `#mapa`, `#linha-do-tempo`, `#estudos-tematicos` — e uma barra de botões-âncora fixa sob a navbar. Links para equipe e metodologia apontam para esses blocos.
+- **Nomenclatura oficial:** "Quem somos" (não "Equipe") e "Metodologia" (não "Como o painel foi construído").
+- **Conteúdo editorial:** vem de `content/ajustes.md`, convertido de `content/Ajustes_linha_7.docx` (`pandoc -t gfm --wrap=none`). Ignorar comentários e linhas de instrução do Word. Os textos do prompt da rodada prevalecem sobre o docx.
 
 ## Paleta
 
