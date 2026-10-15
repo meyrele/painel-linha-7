@@ -359,7 +359,7 @@
 .video-slot {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: var(--areia);
+  background: var(--branco);   /* caixa branca sobre a seção areia */
   border: 1px solid var(--areia-borda);
   border-radius: var(--radius);
   overflow: hidden;
