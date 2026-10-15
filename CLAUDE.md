@@ -2,7 +2,7 @@
 
 ## Nome do painel
 
-- **Título provisório (público):** Universidades em rede pela Economia Solidária: mapa, memória e movimento
+- **Título provisório (público):** Universidades em rede pela Economia Solidária: mapa, memória e movimentos
 - **Nome de pesquisa:** Universidades e movimentos sociais por uma Economia Solidária Feminista Ecológica: construindo agendas de futuros
 
 ## Propósito deste repositório
