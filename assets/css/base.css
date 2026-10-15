@@ -32,6 +32,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img, svg, iframe { display:block; max-width:100%; }
+
+/* Sem viúvas: títulos equilibram as linhas; textos corridos evitam palavra sozinha
+   na última linha. Navegadores sem suporte recebem o fallback de main.js. */
+h1, h2, h3,
+.hero-subtitle, .page-subtitle, .row-title,
+.lesson-title, .estrategia summary { text-wrap: balance; }
+p, li, .sec-desc, .hero-desc { text-wrap: pretty; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--texto-azul); outline-offset: 3px; }
 

@@ -2,6 +2,31 @@
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* ── Viúvas: fallback para navegadores sem text-wrap: balance ────────
+   Em títulos com mais de três palavras, o último espaço vira espaço
+   inquebrável, e as duas últimas palavras descem juntas. Opera só no
+   último nó de texto que tem espaço, sem achatar os <span> de cor. */
+if (!(window.CSS && CSS.supports('text-wrap', 'balance'))) {
+  document.querySelectorAll('h1, h2, h3, .hero-subtitle, .page-subtitle, .row-title, .lesson-title, .estrategia summary').forEach(el => {
+    if (el.textContent.trim().split(/\s+/).length <= 3) return;
+    const nos = [];
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    while (w.nextNode()) nos.push(w.currentNode);
+    // do fim para o começo: o primeiro espaço encontrado depois de já ter passado por uma palavra
+    let viuPalavra = false;
+    for (let i = nos.length - 1; i >= 0; i--) {
+      const v = nos[i].nodeValue;
+      for (let j = v.length - 1; j >= 0; j--) {
+        if (!/\s/.test(v[j])) { viuPalavra = true; continue; }
+        if (viuPalavra) {
+          nos[i].nodeValue = v.slice(0, j) + '\u00a0' + v.slice(j + 1);
+          return;
+        }
+      }
+    }
+  });
+}
+
 /* ── Menu mobile (hambúrguer) ───────────────────────────────────── */
 const nav = document.querySelector('.site-nav');
 const navToggle = document.querySelector('.nav-toggle');
