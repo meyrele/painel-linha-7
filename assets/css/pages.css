@@ -288,3 +288,200 @@
   .lesson { grid-template-columns: 1fr; gap: 8px; padding: 16px; }
   .playlist { width: 100%; justify-content: center; white-space: normal; text-align: center; }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   PÁGINA "O PROJETO" (pages/o-projeto.html)
+══════════════════════════════════════════════════════════════════ */
+/* a barra de âncoras fica presa sob a navbar: as âncoras param abaixo das duas */
+html:has(.anchor-bar) { scroll-padding-top: calc(var(--nav-h) + 72px); }
+
+.page-subtitle {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.2;
+  margin: -6px 0 24px;
+}
+
+.cor-mapa       { color: var(--cor-mapa); }
+.cor-memoria    { color: var(--cor-memoria); }
+.cor-movimentos { color: var(--cor-movimentos); }
+.cor-sep        { color: var(--cinza); }
+
+.page-lead strong { font-weight: 500; color: var(--carvao); }
+
+/* barra de botões-âncora */
+.anchor-bar {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 100;
+  background: var(--branco);
+  border-bottom: 1px solid var(--areia-borda);
+  padding: 14px var(--pad-x);
+}
+
+.anchor-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.anchor-bar ul::-webkit-scrollbar { display: none; }
+
+.anchor-bar a {
+  padding: 9px 14px;
+  font-size: 11px;
+  border-color: var(--areia-borda);
+}
+
+.anchor-bar a.is-active { background: var(--areia); border-color: var(--carvao); }
+.anchor-bar a:hover { background: var(--areia); color: var(--carvao); }
+
+/* blocos */
+.projeto-bloco + .projeto-bloco {
+  margin-top: 72px;
+  padding-top: 72px;
+  border-top: 1px solid var(--areia-borda);
+}
+
+.prose .projeto-bloco > h2 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -.01em;
+  margin: 0 0 24px;
+}
+
+.bloco-intro {
+  font-size: var(--fs-lead) !important;
+  line-height: 1.75 !important;
+  color: var(--carvao) !important;
+  margin-bottom: 24px;
+}
+
+.prose h4 {
+  font-family: var(--f-ui);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--carvao);
+  margin: 28px 0 8px;
+}
+
+.bloco-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.prose .bloco-acoes a.btn-outline { color: var(--carvao); }
+.prose .bloco-acoes a.btn-outline:hover { color: var(--branco); }
+
+/* foto de iniciativa (Quem somos): entra em outra rodada */
+.foto-sobre { display: none; }
+
+/* perguntas orientadoras em grade 2×2 */
+.perguntas {
+  list-style: none;
+  margin: 20px 0 28px !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.prose .perguntas li {
+  margin: 0;
+  background: var(--branco);
+  border: 1px solid var(--areia-borda);
+  border-radius: var(--radius);
+  padding: 22px 22px 24px;
+  color: var(--carvao);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.pergunta-n {
+  display: block;
+  font-family: var(--f-display);
+  font-size: 28px;
+  line-height: 1;
+  color: var(--texto-cinza-claro);
+  margin-bottom: 12px;
+}
+
+/* estratégias de pesquisa: <details> fechados, seta que gira ao abrir */
+.estrategias { margin-top: 16px; border-top: 1px solid var(--areia-borda); }
+
+.estrategia { border-bottom: 1px solid var(--areia-borda); }
+
+.estrategia summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  font-family: var(--f-ui);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--carvao);
+}
+
+.estrategia summary::-webkit-details-marker { display: none; }
+
+.estrategia summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 8px; height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform .2s ease-out;
+}
+
+.estrategia[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+
+.estrategia-corpo { padding: 0 0 22px; }
+.estrategia[open] .estrategia-corpo { animation: abrir .2s ease-out; }
+
+@keyframes abrir {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* "O que chamamos de…": caixa areia, texto menor */
+.nota-conceito {
+  background: var(--areia);
+  border: 1px solid var(--areia-borda);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-top: 16px;
+}
+
+
+.nota-conceito h3 {
+  font-family: var(--f-ui);
+  font-size: var(--fs-eyebrow) !important;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cinza) !important;
+  margin: 0 0 8px !important;
+}
+
+.prose .nota-conceito p { font-size: 13px; line-height: 1.7; color: var(--cinza); }
+
+@media (max-width: 720px) {
+  html:has(.anchor-bar) { scroll-padding-top: calc(var(--nav-h) + 64px); }
+  .anchor-bar { padding: 12px var(--pad-x); }
+  .perguntas { grid-template-columns: 1fr; }
+  .projeto-bloco + .projeto-bloco { margin-top: 56px; padding-top: 56px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .estrategia summary::after { transition: none; }
+  .estrategia[open] .estrategia-corpo { animation: none; }
+}

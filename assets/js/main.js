@@ -134,3 +134,39 @@ if (ldt) {
   }, { rootMargin: '200px' });
   startObs.observe(ldt);
 }
+
+/* ── Barra de âncoras (página O projeto) ────────────────────────────
+   Marca como ativo o botão da seção que ocupa o topo da área visível
+   (logo abaixo da navbar e da própria barra). */
+const anchorBar = document.querySelector('.anchor-bar');
+if (anchorBar) {
+  const links = [...anchorBar.querySelectorAll('a[href^="#"]')];
+  const secoes = links.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+  let ativo = null;
+  const marcar = () => {
+    const corte = anchorBar.getBoundingClientRect().bottom + 24;
+    let atual = secoes[0];
+    secoes.forEach(s => { if (s.getBoundingClientRect().top <= corte) atual = s; });
+    // no fim da página, a última seção pode não chegar ao topo: marca-a mesmo assim
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) atual = secoes[secoes.length - 1];
+    if (atual === ativo) return;
+    ativo = atual;
+    links.forEach(a => {
+      const on = a.getAttribute('href') === '#' + atual.id;
+      a.classList.toggle('is-active', on);
+      if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+    // no celular a barra rola na horizontal: mantém o botão ativo à vista
+    const a = links.find(l => l.classList.contains('is-active'));
+    const ul = anchorBar.querySelector('ul');
+    if (a && ul.scrollWidth > ul.clientWidth) ul.scrollTo({ left: a.offsetLeft - 16, behavior: reduceMotion ? 'auto' : 'smooth' });
+  };
+  let pendente = false;
+  window.addEventListener('scroll', () => {
+    if (pendente) return;
+    pendente = true;
+    requestAnimationFrame(() => { pendente = false; marcar(); });
+  }, { passive: true });
+  window.addEventListener('resize', marcar);
+  marcar();
+}
