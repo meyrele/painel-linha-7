@@ -415,17 +415,18 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr;
+  gap: 56px;
   padding-bottom: 44px;
   border-bottom: 1px solid rgba(255,255,255,.1);
   margin-bottom: 28px;
 }
 
+.footer-logo { display: inline-block; margin-bottom: 20px; }
+
 .footer-brand img {
   height: 38px;
   width: auto;
-  margin-bottom: 20px;
 }
 
 .footer-brand p {
@@ -433,7 +434,7 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
   font-weight: 300;
   line-height: 1.75;
   color: rgba(255,255,255,.66);
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .footer-label {
@@ -500,7 +501,8 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 
 @media (max-width: 1024px) {
   :root { --pad-x: 40px; }
-  .footer-grid { gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+  .footer-brand { grid-column: 1 / -1; }
   .row { grid-template-columns: 100px minmax(0, 1fr) minmax(0, 1.4fr) 110px; gap: 24px; }
 }
 
