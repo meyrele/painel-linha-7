@@ -29,7 +29,7 @@
 - [ ] Título e botão da seção Estudos temáticos na home (o docx propõe "Três eixos temáticos de estudo sobre a luta por direitos nos territórios" e botões "Ler estudo completo"; mantidos os atuais nesta rodada).
 - [ ] Textos de chamada das seções Mapa, Linha do tempo e Estudos ("Alterar o texto abaixo" no docx, sem texto novo).
 - [ ] Destino de Glossário, Biblioteca e Agenda de futuros: o docx os coloca como botões da página "O projeto"; nesta rodada seguem como páginas próprias.
-- [ ] Revisar no docx: "a ”onda pró-ciência”" (aspas de fechamento na abertura, Apresentação) e "é um ferramenta interativa" (O Mapa), mantidos como no original.
+- [x] Feitas no site (15/10) — avisar a equipe para corrigir também no documento-guia/docx de ajustes: "a ”onda pró-ciência”" → "a “onda pró-ciência”" (aspa de abertura, bloco Apresentação) e "é um ferramenta interativa" → "é uma ferramenta interativa" (bloco O Mapa).
 
 ## Pendências da lista Quem somos (omitidas até completar)
 
