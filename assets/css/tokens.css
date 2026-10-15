@@ -45,6 +45,12 @@
   --texto-magenta:     #c4245a;  /* 5,60 · 4,93 */
   --texto-cinza-claro: #6e6a67;  /* 5,36 · 4,71 */
 
+  /* Cores de produto: subtítulo do hero ("Mapa, memória e movimentos") e itens
+     correspondentes do menu. Tons de texto (contraste ≥ 4,5:1 em branco e areia). */
+  --cor-mapa:       #1a70b1;   /* azul SoU, tom de texto — Mapa */
+  --cor-memoria:    #c4245a;   /* magenta SoU — memória (linha do tempo) */
+  --cor-movimentos: #007965;   /* verde SoU, tom de texto — movimentos (estudos) */
+
   /* Ciclos — copiados de ALL_DATA.cycles da linha do tempo publicada
      (https://meyrele.github.io/linha-do-tempo-linha-7/) */
   --ciclo-1:      #C97C3E;

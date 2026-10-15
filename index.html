@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universidades em rede pela Economia Solidária: mapa, memória e movimento</title>
+<title>Universidades em rede pela Economia Solidária: mapa, memória e movimentos</title>
 <meta name="description" content="Painel da Linha 7 do SoU_Ciência (Unifesp): iniciativas universitárias em parceria com movimentos sociais por uma economia solidária feminista ecológica — mapa, linha do tempo e estudos temáticos.">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
@@ -33,16 +33,24 @@
       <img src="assets/img/souciencia-logo.svg" alt="SoU_Ciência — página inicial do painel" width="171" height="40">
     </a>
     <div class="nav-sep" aria-hidden="true"></div>
-    <span class="nav-project">Painel da Linha 7</span>
+    <span class="nav-project">Universidades em rede pela Economia Solidária</span>
   </div>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#mapa">Mapa</a></li>
-    <li><a href="#linha-do-tempo">Linha do tempo</a></li>
-    <li><a href="#estudos">Estudos temáticos</a></li>
+    <li class="nav-sub">
+      <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="submenu-sobre">Sobre <span class="nav-caret" aria-hidden="true"></span></button>
+      <ul class="nav-submenu" id="submenu-sobre">
+        <li><a href="pages/o-projeto.html#apresentacao">Apresentação</a></li>
+        <li><a href="pages/o-projeto.html#quem-somos">Quem somos</a></li>
+        <li><a href="pages/o-projeto.html#metodologia">Metodologia</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-mapa" href="#mapa">Mapa</a></li>
+    <li><a class="nav-memoria" href="#linha-do-tempo">Linha do tempo</a></li>
+    <li><a class="nav-movimentos" href="#estudos">Estudos temáticos</a></li>
     <li><a href="pages/glossario.html">Glossário</a></li>
     <li><a href="pages/biblioteca.html">Biblioteca</a></li>
-    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="pages/agenda-de-futuros.html">Agenda de futuros</a></li>
   </ul>
 </nav>
 
@@ -57,12 +65,12 @@
   <div class="hero-content">
 
     <div class="hero-left">
-      <p class="hero-super seq">Universidades em rede pela Economia Solidária</p>
+      <h1 class="hero-title seq">Universidades em rede pela Economia Solidária</h1>
 
-      <h1 class="hero-title seq">Mapa, <em>memória</em> e<br>movimento</h1>
+      <p class="hero-subtitle seq"><span class="cor-mapa">Mapa</span><span class="cor-sep">,</span> <span class="cor-memoria">memória</span> <span class="cor-sep">e</span> <span class="cor-movimentos">movimentos</span></p>
 
       <p class="hero-desc seq">
-        Iniciativas universitárias em parceria com movimentos sociais por uma economia solidária feminista ecológica — da redemocratização à construção de agendas de futuros.
+        Iniciativas universitárias em parceria com movimentos sociais por uma <strong>economia solidária feminista ecológica</strong> — da redemocratização à construção de agendas de futuros.
       </p>
 
       <div class="hero-stats seq">
@@ -81,65 +89,38 @@
       </div>
     </div>
 
-    <nav class="hero-start" aria-labelledby="start-label">
-      <p class="start-label" id="start-label">Por onde começar</p>
-      <ol class="rows">
-        <li style="--i:0">
-          <a class="row row--start" href="#mapa" style="--row-cor:var(--texto-ocre)">
-            <span class="row-n">01</span>
-            <span>
-              <span class="row-title">Encontrar iniciativas</span>
-              <span class="row-text">Localize incubadoras, núcleos e coletivos por região, rede ou tema de atuação.</span>
-            </span>
-            <span class="row-arr" aria-hidden="true">→</span>
-          </a>
-        </li>
-        <li style="--i:1">
-          <a class="row row--start" href="#linha-do-tempo" style="--row-cor:var(--texto-verde)">
-            <span class="row-n">02</span>
-            <span>
-              <span class="row-title">Entender a história</span>
-              <span class="row-text">Percorra cinco ciclos, da redemocratização à reconstrução, com eventos e fontes.</span>
-            </span>
-            <span class="row-arr" aria-hidden="true">→</span>
-          </a>
-        </li>
-        <li style="--i:2">
-          <a class="row row--start" href="#estudos" style="--row-cor:var(--texto-magenta)">
-            <span class="row-n">03</span>
-            <span>
-              <span class="row-title">Aprofundar nos temas</span>
-              <span class="row-text">Cuidado, soberania alimentar e moradia: estudos com pesquisadores de movimentos sociais.</span>
-            </span>
-            <span class="row-arr" aria-hidden="true">→</span>
-          </a>
-        </li>
-      </ol>
-    </nav>
+    <aside class="hero-sobre" aria-labelledby="hero-sobre-label">
+      <p class="hero-sobre-label" id="hero-sobre-label">O painel</p>
+      <!-- texto provisório: aguarda aprovação da equipe -->
+      <p class="hero-sobre-text">Desenvolvido pela Linha de Pesquisa 7 do Centro SoU_Ciência (Unifesp), o painel dá visibilidade a iniciativas de universidades brasileiras construídas em parceria com movimentos sociais em torno da economia solidária feminista ecológica.</p>
+      <p class="hero-sobre-text">Um mapa com 134 iniciativas, uma linha do tempo de mais de três décadas, estudos temáticos, glossário, biblioteca e propostas para agendas de futuros — uma construção coletiva, aberta à atualização e à validação pelas redes universitárias.</p>
+      <!-- fim do texto provisório -->
+      <ul class="rows">
+        <li style="--i:0"><a class="row row--compact" href="pages/o-projeto.html#quem-somos"><span class="row-title">Quem somos</span><span class="row-arr" aria-hidden="true">→</span></a></li>
+        <li style="--i:1"><a class="row row--compact" href="pages/o-projeto.html#metodologia"><span class="row-title">Metodologia</span><span class="row-arr" aria-hidden="true">→</span></a></li>
+      </ul>
+    </aside>
 
   </div>
 </section>
 
 <!-- ══ MAPA ════════════════════════════════════════════════════════════ -->
 <section class="section" id="mapa">
-  <div class="sec-head">
-    <div>
-      <div class="sec-tag" style="color:var(--texto-ocre)"><span>Mapa de iniciativas</span></div>
-      <h2 class="sec-title">134 iniciativas em universidades de todas as regiões</h2>
-    </div>
-    <div>
-      <p class="sec-desc">
-        Incubadoras, núcleos, projetos e coletivos que atuam com movimentos sociais nos territórios. Filtre por região, tipo de instituição, rede e tema, abra o cartão de cada iniciativa e baixe os dados para suas próprias análises.
-      </p>
-      <div class="sec-actions">
-        <a href="https://meyrele.github.io/Linha_7/" class="btn-primary" target="_blank" rel="noopener">
-          Abrir mapa completo
-          <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg>
-        </a>
-        <a href="https://forms.gle/HkU83W4qBvEHHf4RA" class="btn-outline" target="_blank" rel="noopener">
-          Cadastre ou atualize sua iniciativa
-        </a>
-      </div>
+  <div class="sec-head sec-head--stack">
+    <div class="sec-tag" style="color:var(--texto-ocre)"><span>Mapa de iniciativas</span></div>
+    <h2 class="sec-title">134 iniciativas em universidades de todas as regiões</h2>
+    <p class="sec-desc">
+      Incubadoras, núcleos, projetos e coletivos que atuam com movimentos sociais nos territórios. Filtre por região, tipo de instituição, rede e tema, abra o cartão de cada iniciativa e baixe os dados para suas próprias análises.
+    </p>
+    <div class="sec-actions">
+      <a href="https://meyrele.github.io/Linha_7/" class="btn-primary" target="_blank" rel="noopener">
+        Abrir mapa completo
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg>
+      </a>
+      <a href="https://forms.gle/HkU83W4qBvEHHf4RA" class="btn-outline" target="_blank" rel="noopener">
+        Cadastre ou atualize sua iniciativa
+      </a>
+      <a href="pages/o-projeto.html#mapa" class="btn-ghost">Sobre o mapa <span class="row-arr" aria-hidden="true">→</span></a>
     </div>
   </div>
 
@@ -171,21 +152,18 @@
 
 <!-- ══ LINHA DO TEMPO ═══════════════════════════════════════════════════ -->
 <section class="section section--areia" id="linha-do-tempo">
-  <div class="sec-head">
-    <div>
-      <div class="sec-tag" style="color:var(--texto-verde)"><span>Linha do tempo</span></div>
-      <h2 class="sec-title">Mais de três décadas em cinco ciclos</h2>
-    </div>
-    <div>
-      <p class="sec-desc">
-        Ações de universidades e movimentos sociais, políticas públicas federais e legislação, organizadas em ciclos de emergência, institucionalização, transversalidade, desmonte e reconstrução. Veja o todo, entre em cada ciclo e chegue aos eventos com descrição e fontes.
-      </p>
-      <div class="sec-actions">
-        <a href="https://meyrele.github.io/linha-do-tempo-linha-7/" class="btn-outline" target="_blank" rel="noopener">
-          Abrir linha do tempo completa
-          <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg>
-        </a>
-      </div>
+  <div class="sec-head sec-head--stack">
+    <div class="sec-tag" style="color:var(--texto-verde)"><span>Linha do tempo</span></div>
+    <h2 class="sec-title">Mais de três décadas em cinco ciclos</h2>
+    <p class="sec-desc">
+      Ações de universidades e movimentos sociais, políticas públicas federais e legislação, organizadas em ciclos de emergência, institucionalização, transversalidade, desmonte e reconstrução. Veja o todo, entre em cada ciclo e chegue aos eventos com descrição e fontes.
+    </p>
+    <div class="sec-actions">
+      <a href="https://meyrele.github.io/linha-do-tempo-linha-7/" class="btn-primary" target="_blank" rel="noopener">
+        Abrir linha do tempo completa
+        <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12L12 2M6 2h6v6"/></svg>
+      </a>
+      <a href="pages/o-projeto.html#linha-do-tempo" class="btn-ghost">Sobre a linha do tempo <span class="row-arr" aria-hidden="true">→</span></a>
     </div>
   </div>
 
@@ -233,39 +211,39 @@
     </p>
   </div>
 
-  <ol class="rows" data-reveal>
-    <li>
-      <a class="row" data-item href="pages/estudos-tematicos.html#cuidado" style="--row-cor:var(--texto-magenta)">
-        <span class="row-label">Estudo 01</span>
-        <h3 class="row-title">Trabalho reprodutivo e cuidado</h3>
-        <p class="row-text">O cuidado no centro do debate econômico. O estudo mostra como iniciativas de economia solidária, em parceria com a universidade, reconhecem o trabalho reprodutivo como força que organiza a resistência e sustenta a vida nos territórios.</p>
-        <span class="row-action">Ler o estudo <span class="row-arr" aria-hidden="true">→</span></span>
-      </a>
-    </li>
-    <li>
-      <a class="row" data-item href="pages/estudos-tematicos.html#soberania-alimentar" style="--row-cor:var(--texto-verde)">
-        <span class="row-label">Estudo 02</span>
-        <h3 class="row-title">Soberania e segurança alimentar</h3>
-        <p class="row-text">Diante das desigualdades do modelo agroexportador, a aliança entre ciência, agricultura familiar e movimentos sociais promove a agroecologia, circuitos curtos de comercialização e o direito a alimentos saudáveis.</p>
-        <span class="row-action">Ler o estudo <span class="row-arr" aria-hidden="true">→</span></span>
-      </a>
-    </li>
-    <li>
-      <a class="row" data-item href="pages/estudos-tematicos.html#moradia" style="--row-cor:var(--texto-azul)">
-        <span class="row-label">Estudo 03</span>
-        <h3 class="row-title">Moradia e território</h3>
-        <p class="row-text">A luta por habitação disputa o direito à cidade. O estudo reúne experiências em que o apoio universitário a mutirões, cooperativas e ocupações consolida territórios solidários e autogeridos.</p>
-        <span class="row-action">Ler o estudo <span class="row-arr" aria-hidden="true">→</span></span>
-      </a>
-    </li>
-  </ol>
+  <div class="estudos-grid" data-reveal>
+    <article class="estudo" data-item style="--tema:var(--texto-magenta)">
+      <p class="estudo-label">Estudo 01</p>
+      <h3 class="estudo-title">Trabalho reprodutivo e cuidado</h3>
+      <!-- vídeo-animação: trocar o <span> por <iframe src="https://www.youtube-nocookie.com/embed/ID" title="…" allowfullscreen></iframe> -->
+      <div class="video-slot"><span>Vídeo-animação em breve</span></div>
+      <p class="estudo-text">O cuidado no centro do debate econômico. O estudo mostra como iniciativas de economia solidária, em parceria com a universidade, reconhecem o trabalho reprodutivo como força que organiza a resistência e sustenta a vida nos territórios.</p>
+      <a class="estudo-link" href="pages/estudos-tematicos.html#cuidado">Ler o estudo <span class="row-arr" aria-hidden="true">→</span></a>
+    </article>
+    <article class="estudo" data-item style="--tema:var(--texto-verde)">
+      <p class="estudo-label">Estudo 02</p>
+      <h3 class="estudo-title">Soberania e segurança alimentar</h3>
+      <!-- vídeo-animação: trocar o <span> por <iframe src="https://www.youtube-nocookie.com/embed/ID" title="…" allowfullscreen></iframe> -->
+      <div class="video-slot"><span>Vídeo-animação em breve</span></div>
+      <p class="estudo-text">Diante das desigualdades do modelo agroexportador, a aliança entre ciência, agricultura familiar e movimentos sociais promove a agroecologia, circuitos curtos de comercialização e o direito a alimentos saudáveis.</p>
+      <a class="estudo-link" href="pages/estudos-tematicos.html#soberania-alimentar">Ler o estudo <span class="row-arr" aria-hidden="true">→</span></a>
+    </article>
+    <article class="estudo" data-item style="--tema:var(--texto-azul)">
+      <p class="estudo-label">Estudo 03</p>
+      <h3 class="estudo-title">Moradia e território</h3>
+      <!-- vídeo-animação: trocar o <span> por <iframe src="https://www.youtube-nocookie.com/embed/ID" title="…" allowfullscreen></iframe> -->
+      <div class="video-slot"><span>Vídeo-animação em breve</span></div>
+      <p class="estudo-text">A luta por habitação disputa o direito à cidade. O estudo reúne experiências em que o apoio universitário a mutirões, cooperativas e ocupações consolida territórios solidários e autogeridos.</p>
+      <a class="estudo-link" href="pages/estudos-tematicos.html#moradia">Ler o estudo <span class="row-arr" aria-hidden="true">→</span></a>
+    </article>
+  </div>
 </section>
 
 <!-- ══ RECURSOS ═════════════════════════════════════════════════════════ -->
 <section class="section" id="recursos">
   <div class="section-head-simple">
     <div class="sec-tag" style="color:var(--texto-laranja)"><span>Recursos</span></div>
-    <h2 class="sec-title">Para chegar ao tema e ir mais fundo</h2>
+    <h2 class="sec-title">Para se aprofundar nos temas</h2>
   </div>
 
   <ol class="rows" data-reveal>
@@ -296,50 +274,24 @@
   </ol>
 </section>
 
-<!-- ══ SOBRE ════════════════════════════════════════════════════════════ -->
-<section class="section section--areia about-section" id="sobre">
-  <div>
-    <div class="sec-tag" style="color:var(--texto-magenta)"><span>O projeto</span></div>
-    <h2 class="sec-title">Da universidade invisível à universidade necessária</h2>
-    <div class="about-body">
-      <p>Nas pesquisas do Centro SoU_Ciência sobre percepção pública da ciência, identificamos uma onda pró-ciência durante a pandemia de Covid-19. As universidades, centros da produção científica do país, não se beneficiaram desse reconhecimento: seguem alvo de ataques e pouco conhecidas em sua atuação junto à sociedade.</p>
-      <p>Inspirado no conceito de Universidade Necessária, de Darcy Ribeiro, este painel dá visibilidade a uma universidade invisível: programas, núcleos, incubadoras e coletivos que há décadas trabalham com movimentos sociais em práticas de cooperação e cuidado, trabalho associado e autogerido, tecnologias sociais e sustentáveis.</p>
-      <p>O painel resulta da Linha de Pesquisa 7 do SoU_Ciência e é construído de forma progressiva e colaborativa: convive com dados incompletos, aceita atualizações e será validado com as redes universitárias antes de cada etapa de publicação.</p>
-    </div>
-  </div>
-
-  <div>
-    <figure class="citacao" data-reveal>
-      <div class="rule"></div>
-      <blockquote data-item>
-        <p>A história é aberta, está em disputa e movimento. Ao aproximar universidade, ciência e movimentos sociais, essas iniciativas trazem contribuições para a construção de agendas de futuros.</p>
-        <cite>Equipe da Linha 7 · SoU_Ciência</cite>
-      </blockquote>
-      <div class="rule"></div>
-    </figure>
-
-    <!-- foto de uma iniciativa: entra em outra rodada (oculta por CSS) -->
-    <figure class="foto-sobre">
-      <img alt="">
-      <figcaption></figcaption>
-    </figure>
-
-    <ul class="rows about-links" data-reveal>
-      <li><a class="row row--compact" data-item href="pages/equipe.html" style="--row-cor:var(--texto-magenta)"><span class="row-title">Conheça a equipe</span><span class="row-arr" aria-hidden="true">→</span></a></li>
-      <li><a class="row row--compact" data-item href="pages/metodologia.html" style="--row-cor:var(--texto-magenta)"><span class="row-title">Como o painel foi construído</span><span class="row-arr" aria-hidden="true">→</span></a></li>
-      <li><a class="row row--compact" data-item href="https://souciencia.unifesp.br/" target="_blank" rel="noopener" style="--row-cor:var(--texto-magenta)"><span class="row-title">Centro SoU_Ciência</span><span class="row-arr" aria-hidden="true">↗</span></a></li>
-    </ul>
-  </div>
-</section>
-
 </main>
 
 <!-- ══ RODAPÉ ═══════════════════════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="assets/img/souciencia-logo-claro.svg" alt="SoU_Ciência" width="163" height="38">
-      <p>Centro de Estudos Sociedade, Universidade e Ciência — think tank vinculado à Unifesp, fundado em 2021. Ciência aberta, transparência de dados e divulgação baseada em evidências.</p>
+      <a class="footer-logo" href="https://souciencia.unifesp.br/" target="_blank" rel="noopener">
+        <img src="assets/img/souciencia-logo-claro.svg" alt="SoU_Ciência — site do Centro (abre em nova aba)" width="163" height="38">
+      </a>
+      <p>O Centro de Estudos Sociedade, Universidade e Ciência (SoU_Ciência) é um think tank vinculado à Universidade Federal de São Paulo (Unifesp), fundado em 2021 e reconhecido como órgão complementar da universidade em maio de 2025. Dedica-se à produção e à disseminação de conhecimentos sobre as relações entre sociedade, universidade e ciência, com foco na ciência aberta, na transparência de dados e na divulgação científica baseada em evidências.</p>
+    </div>
+    <div>
+      <div class="footer-label">Sobre</div>
+      <ul class="footer-links">
+        <li><a href="https://souciencia.unifesp.br/" target="_blank" rel="noopener">SoU_Ciência</a></li>
+        <li><a href="pages/o-projeto.html#quem-somos">Quem somos</a></li>
+        <li><a href="pages/o-projeto.html#metodologia">Metodologia</a></li>
+      </ul>
     </div>
     <div>
       <div class="footer-label">Painel</div>
@@ -353,12 +305,10 @@
       </ul>
     </div>
     <div>
-      <div class="footer-label">Sobre</div>
+      <div class="footer-label">Atualização</div>
       <ul class="footer-links">
-        <li><a href="https://souciencia.unifesp.br/" target="_blank" rel="noopener">SoU_Ciência</a></li>
-        <li><a href="pages/equipe.html">Equipe</a></li>
-        <li><a href="pages/metodologia.html">Metodologia</a></li>
         <li><a href="https://forms.gle/HkU83W4qBvEHHf4RA" target="_blank" rel="noopener">Cadastre sua iniciativa</a></li>
+        <li><a href="https://forms.gle/HkU83W4qBvEHHf4RA" target="_blank" rel="noopener">Atualize sua iniciativa</a></li>
       </ul>
     </div>
   </div>

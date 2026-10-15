@@ -16,6 +16,47 @@ if (nav && navToggle) {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
 }
 
+/* ── Submenu "Sobre" ────────────────────────────────────────────────
+   Abre ao passar o mouse (CSS), ao focar pelo teclado (:focus-within) e
+   ao clicar/tocar (.is-open). Esc fecha e devolve o foco ao botão;
+   clicar fora fecha. No menu hambúrguer os subitens ficam sempre visíveis. */
+const sub = document.querySelector('.nav-sub');
+if (sub) {
+  const btn = sub.querySelector('.nav-sub-toggle');
+  const hamburguer = window.matchMedia('(max-width: 1100px)');
+  const comHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const aberto = () => sub.classList.contains('is-open') ||
+    (sub.matches(':focus-within') && !sub.classList.contains('is-dismissed')) ||
+    (comHover.matches && sub.matches(':hover'));
+  const sync = () => btn.setAttribute('aria-expanded', String(hamburguer.matches || aberto()));
+  const fechar = () => { sub.classList.remove('is-open'); sync(); };
+  // o navegador foca o botão antes do clique: guarda o estado de antes do toque/clique
+  let antes = null;
+  btn.addEventListener('pointerdown', () => { antes = aberto(); });
+  btn.addEventListener('click', () => {
+    if (hamburguer.matches) return;
+    const estava = antes ?? aberto();  // Enter/Espaço pelo teclado não passam por pointerdown
+    antes = null;
+    sub.classList.toggle('is-open', !estava);
+    sub.classList.toggle('is-dismissed', estava);  // o botão segue focado: sem isto o :focus-within reabriria
+    sync();
+  });
+  sub.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    sub.classList.remove('is-open');
+    sub.classList.add('is-dismissed');
+    btn.focus();
+    sync();
+  });
+  sub.addEventListener('focusout', e => {
+    if (!sub.contains(e.relatedTarget)) { sub.classList.remove('is-dismissed'); fechar(); }
+  });
+  ['focusin', 'mouseenter', 'mouseleave'].forEach(ev => sub.addEventListener(ev, () => requestAnimationFrame(sync)));
+  document.addEventListener('click', e => { if (!sub.contains(e.target)) fechar(); });
+  hamburguer.addEventListener('change', sync);
+  sync();
+}
+
 /* ── Fios e linhas (D2) ─────────────────────────────────────────────
    Cada [data-reveal] recebe .in uma única vez ao entrar na viewport:
    os fios desenham (scaleX) e os [data-item] entram escalonados.
@@ -92,4 +133,40 @@ if (ldt) {
     }, 8000);
   }, { rootMargin: '200px' });
   startObs.observe(ldt);
+}
+
+/* ── Barra de âncoras (página O projeto) ────────────────────────────
+   Marca como ativo o botão da seção que ocupa o topo da área visível
+   (logo abaixo da navbar e da própria barra). */
+const anchorBar = document.querySelector('.anchor-bar');
+if (anchorBar) {
+  const links = [...anchorBar.querySelectorAll('a[href^="#"]')];
+  const secoes = links.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+  let ativo = null;
+  const marcar = () => {
+    const corte = anchorBar.getBoundingClientRect().bottom + 24;
+    let atual = secoes[0];
+    secoes.forEach(s => { if (s.getBoundingClientRect().top <= corte) atual = s; });
+    // no fim da página, a última seção pode não chegar ao topo: marca-a mesmo assim
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) atual = secoes[secoes.length - 1];
+    if (atual === ativo) return;
+    ativo = atual;
+    links.forEach(a => {
+      const on = a.getAttribute('href') === '#' + atual.id;
+      a.classList.toggle('is-active', on);
+      if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+    // no celular a barra rola na horizontal: mantém o botão ativo à vista
+    const a = links.find(l => l.classList.contains('is-active'));
+    const ul = anchorBar.querySelector('ul');
+    if (a && ul.scrollWidth > ul.clientWidth) ul.scrollTo({ left: a.offsetLeft - 16, behavior: reduceMotion ? 'auto' : 'smooth' });
+  };
+  let pendente = false;
+  window.addEventListener('scroll', () => {
+    if (pendente) return;
+    pendente = true;
+    requestAnimationFrame(() => { pendente = false; marcar(); });
+  }, { passive: true });
+  window.addEventListener('resize', marcar);
+  marcar();
 }
