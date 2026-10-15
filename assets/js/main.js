@@ -16,6 +16,47 @@ if (nav && navToggle) {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
 }
 
+/* ── Submenu "Sobre" ────────────────────────────────────────────────
+   Abre ao passar o mouse (CSS), ao focar pelo teclado (:focus-within) e
+   ao clicar/tocar (.is-open). Esc fecha e devolve o foco ao botão;
+   clicar fora fecha. No menu hambúrguer os subitens ficam sempre visíveis. */
+const sub = document.querySelector('.nav-sub');
+if (sub) {
+  const btn = sub.querySelector('.nav-sub-toggle');
+  const hamburguer = window.matchMedia('(max-width: 1100px)');
+  const comHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const aberto = () => sub.classList.contains('is-open') ||
+    (sub.matches(':focus-within') && !sub.classList.contains('is-dismissed')) ||
+    (comHover.matches && sub.matches(':hover'));
+  const sync = () => btn.setAttribute('aria-expanded', String(hamburguer.matches || aberto()));
+  const fechar = () => { sub.classList.remove('is-open'); sync(); };
+  // o navegador foca o botão antes do clique: guarda o estado de antes do toque/clique
+  let antes = null;
+  btn.addEventListener('pointerdown', () => { antes = aberto(); });
+  btn.addEventListener('click', () => {
+    if (hamburguer.matches) return;
+    const estava = antes ?? aberto();  // Enter/Espaço pelo teclado não passam por pointerdown
+    antes = null;
+    sub.classList.toggle('is-open', !estava);
+    sub.classList.toggle('is-dismissed', estava);  // o botão segue focado: sem isto o :focus-within reabriria
+    sync();
+  });
+  sub.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    sub.classList.remove('is-open');
+    sub.classList.add('is-dismissed');
+    btn.focus();
+    sync();
+  });
+  sub.addEventListener('focusout', e => {
+    if (!sub.contains(e.relatedTarget)) { sub.classList.remove('is-dismissed'); fechar(); }
+  });
+  ['focusin', 'mouseenter', 'mouseleave'].forEach(ev => sub.addEventListener(ev, () => requestAnimationFrame(sync)));
+  document.addEventListener('click', e => { if (!sub.contains(e.target)) fechar(); });
+  hamburguer.addEventListener('change', sync);
+  sync();
+}
+
 /* ── Fios e linhas (D2) ─────────────────────────────────────────────
    Cada [data-reveal] recebe .in uma única vez ao entrar na viewport:
    os fios desenham (scaleX) e os [data-item] entram escalonados.
