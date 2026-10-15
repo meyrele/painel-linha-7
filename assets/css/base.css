@@ -174,7 +174,6 @@ a { color: inherit; }
 
 .nav-submenu a:hover { color: var(--carvao); background: var(--areia); text-decoration: none; }
 
-.nav-sub.is-open .nav-submenu,
 .nav-sub:focus-within:not(.is-dismissed) .nav-submenu {
   opacity: 1;
   visibility: visible;
@@ -182,7 +181,6 @@ a { color: inherit; }
   transition-delay: 0s;
 }
 
-.nav-sub.is-open .nav-caret,
 .nav-sub:focus-within:not(.is-dismissed) .nav-caret { transform: translateY(2px) rotate(-135deg); }
 
 @media (hover: hover) and (pointer: fine) {
@@ -547,12 +545,11 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 
   .nav-links > li + li { border-top: 1px solid var(--areia); }
 
-  /* "Sobre" vira cabeçalho e os três subitens aparecem indentados */
-  .nav-sub-toggle { cursor: default; color: var(--carvao); }
+  /* "Sobre" é link para a página; os três subitens ficam sempre visíveis, indentados */
   .nav-caret { display: none; }
   .nav-submenu,
-  .nav-sub.is-open .nav-submenu,
-  .nav-sub:focus-within .nav-submenu {
+  .nav-sub:focus-within .nav-submenu,
+  .nav-sub:hover .nav-submenu {
     position: static;
     min-width: 0;
     opacity: 1;
