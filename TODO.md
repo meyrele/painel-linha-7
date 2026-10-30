@@ -19,7 +19,6 @@
 
 ## Aguardando a equipe (rodada de 15/10)
 
-- [ ] Texto do bloco "O painel" no hero da home: os dois parágrafos são provisórios (marcados com comentário no `index.html`).
 - [ ] Ícones de redes sociais no rodapé (Instagram, Facebook, LinkedIn, YouTube): faltam as URLs.
 - [ ] Rodapé, coluna Atualização: "Exclua sua iniciativa" e "Contato" aguardam decisão (destino e formulário).
 - [ ] Links do artigo SciELO ("onda pró-ciência") e do "artigo de 2023" citados na Apresentação e na Metodologia.
@@ -43,6 +42,10 @@
 - [ ] Omitidas as anotações internas do fim do item 2.11: "Referências", "Citar conteúdo do 'Delineamento da pesquisa' e 'Mapa Mental' — incluir quadros?" e "Danilo".
 - [ ] Lista de referências citadas no texto (Holliday, 2006; Falkembach, 2007; CFES, 2012; Centro SoU_Ciência, 2021) ainda não existe.
 - [ ] "Como apresentado em artigo de 2023": falta a referência/link do artigo (trecho marcado no documento-guia).
+
+## Mapa e linha do tempo (repositórios próprios)
+
+- [ ] Aplicar os títulos dos produtos dentro dos sites do mapa e da linha do tempo (repositórios próprios).
 
 ## Manutenção
 
