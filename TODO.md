@@ -45,7 +45,7 @@
 
 ## Mapa e linha do tempo (repositórios próprios)
 
-- [ ] Aplicar os títulos dos produtos dentro dos sites do mapa e da linha do tempo (repositórios próprios).
+- [ ] Títulos dos produtos aprovados em 29/10, a aplicar DENTRO dos sites do mapa e da linha do tempo (repositórios próprios), não na home: 'Economia Solidária Feminista Ecológica – mapa de iniciativas nas Universidades' e 'Economia Solidária Feminista Ecológica – linha do tempo nas Universidades, 1993–2025'.
 
 ## Manutenção
 

@@ -21,7 +21,7 @@ Publicado em: https://meyrele.github.io/painel-linha-7/
 - **Caminhos sempre relativos** (`assets/...`, `pages/...`), nunca começando com `/`: o site vive no subdiretório `/painel-linha-7/` do domínio, e um caminho absoluto quebra no ar.
 - **Fonte Aquawax Pro não pode ser versionada** (licença pendente). Nenhum `.woff`, `.woff2`, `.otf` ou `.ttf` entra no repo (já bloqueado no `.gitignore`). Até a licença sair, usar Plus Jakarta Sans (interface) e DM Sans (texto) via Google Fonts, além da Playfair Display (display).
 - **`assets/css/base.css` é compartilhado por todas as páginas** (home e `pages/`): reset, tokens de tipografia, navbar e menu mobile, botões, rótulos e títulos de seção, etiqueta "Em construção", `.rule`/`.rows` e rodapé. Estilos só da home vão em `home.css`; só das páginas internas, em `pages.css`. Navbar e rodapé são repetidos em cada HTML: ao mudar um, mudar em todos.
-- **Os números da home — 134 iniciativas — são fixos no HTML**; atualizar junto com o mapa (contador do hero em `index.html`).
+- **Os números da home — 134 iniciativas — são fixos no HTML**; atualizar junto com o mapa (hero e título da seção Mapa em `index.html`).
 - **A home copia as cores dos sites publicados do mapa e da linha do tempo, nunca o contrário.** As cores dos ciclos vêm de `ALL_DATA.cycles` da linha do tempo; as dos tipos de instituição, da legenda do mapa. Ficam em `tokens.css` (`--ciclo-*`, `--mapa-*`).
 - **Licença exibida: CC BY 4.0, a confirmar com a equipe.**
 - A imagem original `linha-do-tempo-aprovada.jpg` (~11 MB) fica só local (`.gitignore`); o site usa a versão `.webp`. **Cuidado ao mesclar em `main` branches antigas**: o merge que tirou o .jpg do git apagou a cópia local; se sumir, restaurar com `git show a6deb38:assets/img/linha-do-tempo-aprovada.jpg > assets/img/linha-do-tempo-aprovada.jpg`.
@@ -44,10 +44,7 @@ O conteúdo de `content/` **não é versionado** (`.gitignore`): o documento-gui
 
 - **Subtítulo no plural:** "Mapa, memória e movimentos" (nunca "movimento").
 - **Hero em três pesos:** H1 "Universidades em rede pela Economia Solidária" (Playfair 400) → subtítulo "Mapa, memória e movimentos" (Playfair itálico, cada palavra na sua cor de produto; vírgula e "e" em cinza) → linha de apoio (DM Sans 17px). À direita, o bloco "O painel" (três parágrafos enviados pela equipe na rodada de 30/10; DM Sans 14,5px, entrelinha 1,7, até 520px) com links para Quem somos e Metodologia.
-- **Títulos das seções da home (texto aprovado pela equipe em 29/10; não alterar sem nova aprovação):**
-  - Mapa: "Economia Solidária Feminista Ecológica – mapa de iniciativas nas Universidades"
-  - Linha do tempo: "Economia Solidária Feminista Ecológica – linha do tempo nas Universidades, 1993–2025"
-  - Travessão curto "–" com espaços entre as partes; no período, sem espaços. Maiúsculas exatamente assim.
+- **Títulos dos produtos aprovados em 29/10**, a aplicar DENTRO dos sites do mapa e da linha do tempo (repositórios próprios), não na home: 'Economia Solidária Feminista Ecológica – mapa de iniciativas nas Universidades' e 'Economia Solidária Feminista Ecológica – linha do tempo nas Universidades, 1993–2025'.
 - **Cores de produto** (`tokens.css`): `--cor-mapa` (azul, Mapa), `--cor-memoria` (magenta, Linha do tempo), `--cor-movimentos` (verde, Estudos temáticos). Usadas no subtítulo e nos itens correspondentes do menu.
 - **Navbar:** logo · nome do painel · Sobre · Mapa · Linha do tempo · Estudos temáticos · Glossário · Biblioteca · Agenda de futuros. "Sobre" é link para `o-projeto.html` (topo) e abre um submenu (Apresentação, Quem somos, Metodologia) ao passar o mouse ou focar pelo teclado; ↓/↑ percorrem os subitens, Esc fecha. Hambúrguer a partir de 1100px, com os subitens sempre visíveis e indentados; entre 1101 e 1399px o nome quebra em duas linhas.
 - **Sem viúvas:** títulos com `text-wrap: balance` e textos com `text-wrap: pretty` (`base.css`); fallback em `main.js` para navegadores sem suporte.
