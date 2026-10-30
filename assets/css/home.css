@@ -144,7 +144,7 @@
   color: var(--texto-cinza-claro);
 }
 
-/* bloco "O painel": rótulo, dois parágrafos e dois links em linhas compactas */
+/* bloco "O painel": rótulo, três parágrafos e dois links em linhas compactas */
 .hero-sobre-label {
   font-family: var(--f-ui);
   font-size: var(--fs-eyebrow);
@@ -156,9 +156,11 @@
 }
 
 .hero-sobre-text {
-  font-size: var(--fs-body);
-  line-height: 1.75;
+  font-family: var(--f-body);
+  font-size: 14.5px;
+  line-height: 1.7;
   color: var(--cinza);
+  max-width: 520px;
 }
 
 .hero-sobre-text + .hero-sobre-text { margin-top: 14px; }
