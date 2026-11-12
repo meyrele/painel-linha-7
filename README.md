@@ -1,4 +1,4 @@
-# Economia Solidária Feminista Ecológica: mapa, memória e movimentos
+# Universidades em rede pela Economia Solidária Feminista Ecológica: mapa, memória e movimentos
 
 Hub do painel de pesquisa da Linha 7 do [SoU_Ciência](https://souciencia.unifesp.br/) (Unifesp). Site estático que reúne e apresenta os produtos do painel: mapa de iniciativas, linha do tempo, estudos temáticos, glossário, biblioteca básica, agenda de futuros e a página "O projeto" (apresentação, quem somos e metodologia).
 
