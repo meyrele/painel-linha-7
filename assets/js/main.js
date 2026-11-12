@@ -7,7 +7,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
    inquebrável, e as duas últimas palavras descem juntas. Opera só no
    último nó de texto que tem espaço, sem achatar os <span> de cor. */
 if (!(window.CSS && CSS.supports('text-wrap', 'balance'))) {
-  document.querySelectorAll('h1, h2, h3, .hero-subtitle, .page-subtitle, .row-title, .lesson-title, .estrategia summary').forEach(el => {
+  document.querySelectorAll('h1, h2, h3, .hero-subtitle, .page-subtitle, .row-title, .lesson-title, .estrategia summary, .nav-project').forEach(el => {
     if (el.textContent.trim().split(/\s+/).length <= 3) return;
     const nos = [];
     const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);

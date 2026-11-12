@@ -580,7 +580,7 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
   .nav-left { gap: 12px; }
   .nav-logo img { height: 32px; }
   .nav-left { flex-shrink: 1; }
-  .nav-project { font-size: 11.5px; max-width: 170px; min-width: 0; }
+  .nav-project { font-size: 11.5px; max-width: 170px; min-width: 0; text-wrap: balance; }  /* "Economia Solidária / Feminista Ecológica" */
   .nav-links a, .nav-sub-toggle { padding: 14px 16px; }
   .nav-submenu a { padding-left: 40px; }
 
