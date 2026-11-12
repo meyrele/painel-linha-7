@@ -489,7 +489,8 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 /* ══════════════════════════════════════
    RESPONSIVO
 ══════════════════════════════════════ */
-/* entre 1101 e 1399px o nome do painel quebra em duas linhas para os sete itens caberem */
+/* entre 1101 e 1399px o nome do painel pode quebrar em duas linhas para os sete itens caberem;
+   as faixas logo abaixo o mantêm em uma linha onde ele cabe */
 @media (max-width: 1399px) {
   .site-nav { padding: 0 32px; gap: 20px; }
   .nav-left { gap: 16px; }
@@ -502,6 +503,15 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
   .site-nav { padding: 0 24px; gap: 16px; }
   .nav-logo img { height: 36px; }
   .nav-links { gap: 15px; }
+}
+
+/* nome do painel em uma linha onde couber: 13px; senão 12px; só então duas linhas (13px).
+   Faixas medidas no Chrome com 8px de folga; o espaçamento da navbar muda em 1200px. */
+@media (min-width: 1236px) and (max-width: 1399px), (min-width: 1181px) and (max-width: 1200px) {
+  .nav-project { white-space: nowrap; max-width: none; }
+}
+@media (min-width: 1217px) and (max-width: 1235px), (min-width: 1162px) and (max-width: 1180px) {
+  .nav-project { white-space: nowrap; max-width: none; font-size: 12px; }
 }
 
 @media (max-width: 1024px) {
