@@ -2,7 +2,7 @@
 
 ## Nome do painel
 
-- **Título provisório (público):** Universidades em rede pela Economia Solidária: mapa, memória e movimentos
+- **Título público (desde 12/11):** Economia Solidária Feminista Ecológica: mapa, memória e movimentos. Título anterior: "Universidades em rede pela Economia Solidária" — ainda citado entre aspas em textos de corpo da equipe (página O projeto), que só mudam com aprovação.
 - **Nome de pesquisa:** Universidades e movimentos sociais por uma Economia Solidária Feminista Ecológica: construindo agendas de futuros
 
 ## Propósito deste repositório
@@ -42,11 +42,12 @@ O conteúdo de `content/` **não é versionado** (`.gitignore`): o documento-gui
 
 ## Arquitetura do conteúdo
 
+- **`<title>`:** home "Economia Solidária Feminista Ecológica: mapa, memória e movimentos"; páginas internas "<Página> · Economia Solidária Feminista Ecológica · SoU_Ciência".
 - **Subtítulo no plural:** "Mapa, memória e movimentos" (nunca "movimento").
-- **Hero em três pesos:** H1 "Universidades em rede pela Economia Solidária" (Playfair 400) → subtítulo "Mapa, memória e movimentos" (Playfair itálico, cada palavra na sua cor de produto; vírgula e "e" em cinza) → linha de apoio (DM Sans 17px). À direita, o bloco "O painel" (três parágrafos enviados pela equipe na rodada de 30/10; DM Sans 14,5px, entrelinha 1,7, até 520px) com links para Quem somos e Metodologia.
+- **Hero em três pesos:** H1 "Economia Solidária Feminista Ecológica" (Playfair 400) → subtítulo "Mapa, memória e movimentos" (Playfair itálico, cada palavra na sua cor de produto; vírgula e "e" em cinza) → linha de apoio (DM Sans 17px). À direita, o bloco "O painel" (três parágrafos enviados pela equipe na rodada de 30/10; DM Sans 14,5px, entrelinha 1,7, até 520px) com links para Quem somos e Metodologia.
 - **Títulos dos produtos aprovados em 29/10**, a aplicar DENTRO dos sites do mapa e da linha do tempo (repositórios próprios), não na home: 'Economia Solidária Feminista Ecológica – mapa de iniciativas nas Universidades' e 'Economia Solidária Feminista Ecológica – linha do tempo nas Universidades, 1993–2025'.
 - **Cores de produto** (`tokens.css`): `--cor-mapa` (azul, Mapa), `--cor-memoria` (magenta, Linha do tempo), `--cor-movimentos` (verde, Estudos temáticos). Usadas no subtítulo e nos itens correspondentes do menu.
-- **Navbar:** logo · nome do painel · Sobre · Mapa · Linha do tempo · Estudos temáticos · Glossário · Biblioteca · Agenda de futuros. "Sobre" é link para `o-projeto.html` (topo) e abre um submenu (Apresentação, Quem somos, Metodologia) ao passar o mouse ou focar pelo teclado; ↓/↑ percorrem os subitens, Esc fecha. Hambúrguer a partir de 1100px, com os subitens sempre visíveis e indentados; entre 1101 e 1399px o nome quebra em duas linhas.
+- **Navbar:** logo · nome do painel · Sobre · Mapa · Linha do tempo · Estudos temáticos · Glossário · Biblioteca · Agenda de futuros. "Sobre" é link para `o-projeto.html` (topo) e abre um submenu (Apresentação, Quem somos, Metodologia) ao passar o mouse ou focar pelo teclado; ↓/↑ percorrem os subitens, Esc fecha. Hambúrguer a partir de 1100px, com os subitens sempre visíveis e indentados. Nome do painel ao lado do logo: em uma linha a 13px onde couber; senão 12px; só então duas linhas ("Economia Solidária / Feminista Ecológica"). Faixas em `base.css` (medidas em 12/11, com 8px de folga): 1101–1161 e 1201–1216 duas linhas; 1162–1180 e 1217–1235 uma linha a 12px; 1181–1200 e a partir de 1236 uma linha a 13px.
 - **Sem viúvas:** títulos com `text-wrap: balance` e textos com `text-wrap: pretty` (`base.css`); fallback em `main.js` para navegadores sem suporte.
 - **Caixas sobre fundo areia são brancas** (borda 1px `--areia-borda`, raio 4px).
 - **Página "O projeto"** (`pages/o-projeto.html`): reúne o conteúdo institucional em blocos com âncora — `#apresentacao`, `#quem-somos`, `#metodologia`, `#mapa`, `#linha-do-tempo`, `#estudos-tematicos` — e uma barra de botões-âncora fixa sob a navbar. Links para equipe e metodologia apontam para esses blocos.
