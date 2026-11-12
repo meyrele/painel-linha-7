@@ -63,7 +63,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-shrink: 0;
+  flex-shrink: 1;   /* o nome do painel cede largura antes dos itens do menu */
   min-width: 0;
 }
 
@@ -76,13 +76,15 @@ a { color: inherit; }
   flex-shrink: 0;
 }
 
+/* nome do painel: até duas linhas equilibradas, centralizado na altura do logo */
 .nav-project {
   font-family: var(--f-ui);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.25;
   color: var(--carvao);
-  white-space: nowrap;
+  max-width: 300px;
+  text-wrap: balance;
 }
 
 .nav-links {
@@ -90,6 +92,7 @@ a { color: inherit; }
   align-items: center;
   gap: 26px;
   list-style: none;
+  flex-shrink: 0;
 }
 
 /* itens do menu: links e o botão "Sobre" têm a mesma tipografia */
@@ -489,12 +492,9 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 /* ══════════════════════════════════════
    RESPONSIVO
 ══════════════════════════════════════ */
-/* entre 1101 e 1399px o nome do painel pode quebrar em duas linhas para os sete itens caberem;
-   as faixas logo abaixo o mantêm em uma linha onde ele cabe */
 @media (max-width: 1399px) {
   .site-nav { padding: 0 32px; gap: 20px; }
   .nav-left { gap: 16px; }
-  .nav-project { white-space: normal; max-width: 172px; }
   .nav-links { gap: 18px; }
   .nav-links a, .nav-sub-toggle { letter-spacing: .05em; }
 }
@@ -503,15 +503,6 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
   .site-nav { padding: 0 24px; gap: 16px; }
   .nav-logo img { height: 36px; }
   .nav-links { gap: 15px; }
-}
-
-/* nome do painel em uma linha onde couber: 13px; senão 12px; só então duas linhas (13px).
-   Faixas medidas no Chrome com 8px de folga; o espaçamento da navbar muda em 1200px. */
-@media (min-width: 1236px) and (max-width: 1399px), (min-width: 1181px) and (max-width: 1200px) {
-  .nav-project { white-space: nowrap; max-width: none; }
-}
-@media (min-width: 1217px) and (max-width: 1235px), (min-width: 1162px) and (max-width: 1180px) {
-  .nav-project { white-space: nowrap; max-width: none; font-size: 12px; }
 }
 
 @media (max-width: 1024px) {
@@ -524,7 +515,6 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
 /* menu hambúrguer: abaixo de 1100px os sete itens não cabem numa linha */
 @media (max-width: 1100px) {
   .site-nav { padding: 0 24px; gap: 16px; }
-  .nav-project { max-width: 260px; }
   .nav-toggle { display: inline-flex; }
 
   .nav-links {
@@ -580,7 +570,7 @@ a.row:focus-visible .row-title { color: var(--row-cor, var(--texto-ocre)); }
   .nav-left { gap: 12px; }
   .nav-logo img { height: 32px; }
   .nav-left { flex-shrink: 1; }
-  .nav-project { font-size: 11.5px; max-width: 170px; min-width: 0; text-wrap: balance; }  /* "Economia Solidária / Feminista Ecológica" */
+  .nav-project { font-size: 11.5px; max-width: 170px; min-width: 0; text-wrap: balance; }  /* três linhas: duas não cabem ao lado do logo */
   .nav-links a, .nav-sub-toggle { padding: 14px 16px; }
   .nav-submenu a { padding-left: 40px; }
 
